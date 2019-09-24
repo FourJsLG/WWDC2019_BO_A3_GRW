@@ -19,8 +19,8 @@ define a3_01
     ReportSettings
     = (report_name: "03_Distributed_Mode.4rp",
         preview_mode: true,
-        dist_mode: true,
-        viewer: "custom")
+        dist_mode: false,
+        viewer: "standard")
 
 main
 

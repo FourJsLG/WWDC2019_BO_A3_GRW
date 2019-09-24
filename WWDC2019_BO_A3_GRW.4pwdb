@@ -4,8 +4,7 @@
 <Fct c="10" el="7" l="1" n="isgdc()" t="F" v="pub"/>
 </File>
 <File n="common/lib/globals.4gl" s="2" ts="20190923130337694"/>
-<File n="common/lib/grw.4gl" s="2" ts="20190923130337781">
-<Dep t="common/lib/common.4gl"/>
+<File n="common/lib/grw.4gl" s="2" ts="20190923235859853">
 <Fct c="10" el="91" l="79" n="dist_mode_settings(dist_mode BOOLEAN)" t="F" v="pub">
 <Call c="14" l="82" n="fgl_report_configureDistributedProcessing" t="F"/>
 <Call c="14" l="83" n="fgl_report_configureDistributedEnvironment" t="F"/>
@@ -18,7 +17,7 @@
 <Call c="39" l="74" n="fgl_report_getbrowserurl" t="F"/>
 </Fct>
 <Fct c="10" el="47" l="14" n="report_settings(handler om.SaxDocumentHandler,report_name STRING,selected_output STRING,preview_mode BOOLEAN,dist_mode BOOLEAN,viewer STRING)" t="F" v="pub">
-<Call c="12" i="common" l="25" n="isgdc" t="F"/>
+<Call c="12" l="25" n="isgdc" t="F"/>
 <Call c="8" l="32" n="fgl_report_loadcurrentsettings" t="F"/>
 <Call c="14" l="33" n="fgl_report_selectdevice" t="F"/>
 <Call c="14" l="34" n="fgl_report_selectpreview" t="F"/>
@@ -115,7 +114,7 @@
 <Call c="27" l="52" n="richtextreport" t="R"/>
 </Fct>
 </File>
-<File n="03_Distributed_Mode/03_Distributed_Mode.4gl" s="2" ts="20190923125437277">
+<File n="03_Distributed_Mode/03_Distributed_Mode.4gl" s="2" ts="20190924144355039">
 <Dep t="common/lib/common.4gl"/>
 <Dep t="common/lib/globals.4gl"/>
 <Dep t="common/lib/grw.4gl"/>
@@ -158,11 +157,11 @@
 <Call c="18" l="36" n="preview_report" t="F"/>
 </Fct>
 </File>
-<File n="06_Templates/06_Templates.4gl" s="2" ts="20190923162450671">
+<File n="06_Templates/06_Templates.4gl" s="2" ts="20190923235859899">
 <Dep t="common/lib/common.4gl"/>
 <Dep t="common/lib/grw.4gl"/>
-<Fct c="10" el="163" l="123" n="create_tables()" t="F" v="pub"/>
-<Fct c="8" el="121" l="106" n="report_candidates(ballot RECORD)" t="R" v="pub"/>
+<Fct c="10" el="170" l="130" n="create_tables()" t="F" v="pub"/>
+<Fct c="8" el="128" l="106" n="report_candidates(ballot RECORD)" t="R" v="pub"/>
 <Fct c="10" el="104" l="74" n="run_candidates_report(handler om.SaxDocumentHandler)" t="F" v="pub">
 <Call c="10" l="81" n="create_tables" t="F"/>
 <Call c="18" l="90" n="report_candidates" t="R"/>

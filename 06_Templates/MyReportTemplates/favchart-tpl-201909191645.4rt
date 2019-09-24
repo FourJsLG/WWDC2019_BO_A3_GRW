@@ -7,20 +7,19 @@
             <report:Format-image/>
         </report:FormatList>
     </report:Settings>
-    <report:Data RWDataLocation="subreport2.rdd" RWFglReportName="report_all_orders"/>
+    <report:Data RWDataLocation="favchart-tpl-201909191645.rsd" RWFglReportName="model"/>
     <report:Conflicts/>
     <rtl:stylesheet>
         <PXML title="Revenue Distribution by Customers" author="FOUR Js Development Tools" creator="Genero Report Writer" subject="Sample Report" keywords="MapChart Chart OrderReport">
-            <rtl:match name="Report" nameConstraint="Report" minOccurs="1" maxOccurs="1">
+            <rtl:match name="model" nameConstraint="model" minOccurs="1" maxOccurs="1">
                 <MINIPAGE name="MiniPage1" width="max" length="max">
-                    <MAPCHART name="Mapchart2" alignment="near" swapX="false" title="Revenue Distribution by Customers" keysTitle="Insert keys title here" valuesTitle="Insert values title here" drawAs="Pie3D">
-                        <rtl:match name="Group userid" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
-                            <rtl:match name="Group orderid" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
-                                <rtl:match name="Group linenum" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
-                                    <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded">
-                                        <ITEM key="{{orderline.orders.shipfirstname.trim()+&quot; &quot;+orderline.orders.shiplastname.trim()}}" value="{{orderline.lineitem.unitprice}}" name="Item2" alignment="near"/>
-                                    </rtl:match>
-                                </rtl:match>
+                    <rtl:input-variable name="MapChartTitle" type="String" expectedLocation="expectedHere"/>
+                    <MAPCHART name="Mapchart2" alignment="near" swapX="false" title="{{MapChartTitle}}" keysTitle="Insert keys title here" valuesTitle="Insert values title here" drawAs="Pie3D">
+                        <rtl:match name="group1" nameConstraint="group1" minOccurs="0" maxOccurs="unbounded">
+                            <rtl:match name="rows1" nameConstraint="rows1" minOccurs="0" maxOccurs="unbounded">
+                                <rtl:input-variable name="MapChartKey" type="String" expectedLocation="expectedBefore"/>
+                                <rtl:input-variable name="MapChartValue" type="Numeric" expectedLocation="expectedBefore"/>
+                                <ITEM key="{{MapChartKey}}" value="{{MapChartValue}}" name="Item2" alignment="near"/>
                             </rtl:match>
                         </rtl:match>
                     </MAPCHART>

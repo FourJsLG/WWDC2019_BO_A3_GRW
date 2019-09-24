@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Project defaultApplication="319347990" gstVersion="31405" version="3.3">
+<Project defaultApplication="253063750" gstVersion="31405" version="3.3">
   <Settings>
     <DynamicProperties version="2">
       <DynamicProperty description="Accent color (Android 5.0 and later)" initialValue="#9575CD" isDefaultInherited="false" isHidden="false" label="Accent color" name="gma-accent-color" readOnly="false" type="COLOR"/>
@@ -126,7 +126,7 @@
       </Application>
     </Group>
     <Group id="655753980" label="03_Distributed_Mode" language="Genero" targetDirectory="$(ProjectDir)/03_Distributed_Mode">
-      <Application binaryName="a3_03_main" dependencies="455109296,273529316,224331282" externalDependencies="libgre.42x" id="253063750" label="a3_03_main">
+      <Application binaryName="a3_03_main" dependencies="455109296,273529316,224331282,7900604" externalDependencies="libgre.42x" id="253063750" label="a3_03_main">
         <VirtualFolder label="service_sample">
           <File filePath="03_Distributed_Mode/service_sample/gre.init_d"/>
         </VirtualFolder>
@@ -134,7 +134,7 @@
           <File compilerOptions="--build-rdd" filePath="03_Distributed_Mode/03_Distributed_Mode.4gl"/>
         </VirtualFolder>
       </Application>
-      <Library binaryName="dist_mode" excludeFromBuild="true" id="7900604" label="dist_mode">
+      <Library binaryName="dist_mode" id="7900604" label="dist_mode" targetDirectory="$(ProjectDir)/03_Distributed_Mode/dist_mode">
         <VirtualFolder label="images"/>
         <VirtualFolder label="reports"/>
       </Library>
@@ -167,6 +167,7 @@
         </VirtualFolder>
         <VirtualFolder label="tpl">
           <File filePath="06_Templates/MyReportTemplates/favchart-tpl-201909191645.4rt"/>
+          <File filePath="06_Templates/MyReportTemplates/favchart-tpl-201909191645.4rt.prop"/>
           <File filePath="06_Templates/MyReportTemplates/favchart-tpl-201909191645.rsd"/>
         </VirtualFolder>
       </Application>
