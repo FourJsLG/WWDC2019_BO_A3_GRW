@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<PROPAGATINGBOX width="min" length="rest" lengthAdjustment="shrinkToChildren" margin="6.0" class="grwBodyBox" xmlns="http://www.4js.com/2004/PXML">
+    <BORDERBOX marginTopWidth="0.67*length(&quot;M&quot;)" marginBottomWidth="0.67*length(&quot;M&quot;)">
+        <P fontSize="13*0.75" fontBold="true">
+            <TEXT fontSize="34*0.75" color="#0066cc" text="Vegan Tikka Masala"/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P fontSize="13*0.75" align="center">
+            <BR/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P fontSize="13*0.75" align="center">
+            <BR/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P fontSize="13*0.75" align="center">
+            <BR/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P fontSize="13*0.75" align="center">
+            <BR/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P fontSize="13*0.75" align="center">
+            <BR/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P fontSize="13*0.75" align="center">
+            <BR/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P>
+            <BR/>
+            <TEXT fontSize="20*0.75" fontBold="true" underline="true" text="Prep Time:"/>
+            <TEXT text=" "/>
+            <TEXT text="15 minutes" fontSize="20*0.75"/>
+        </P>
+    </BORDERBOX>
+</PROPAGATINGBOX>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This XML Schema file is a conversion of OrderReport.rdd with name report_all_orders_twice done on Wed Mar 6 09:38:03 2019-->
+<xsd:schema xmlns:fgl="http://www.4js.com/2010/FglTypes" xmlns:sub2="http://tempuri.org/OrderReport-report_all_orders" xmlns:sub1="http://tempuri.org/OrderReport-report_all_orders" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/OrderReport-report_all_orders_twice" targetNamespace="http://tempuri.org/OrderReport-report_all_orders_twice" elementFormDefault="qualified">
+  <xsd:import namespace="http://tempuri.org/OrderReport-report_all_orders" schemaLocation="OrderReport-report_all_orders.xsd"/>
+  <xsd:import namespace="http://tempuri.org/OrderReport-report_all_orders" schemaLocation="OrderReport-report_all_orders.xsd"/>
+  <xsd:import namespace="http://www.4js.com/2010/FglTypes" schemaLocation="fgltypes.xsd"/>
+  <xsd:element name="Report0" type="OrderReport-report_all_orders_twice"/>
+  <!--Definition of type : OrderReport-report_all_orders_twice-->
+  <xsd:complexType name="OrderReport-report_all_orders_twice">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>Report</label>
+        <match>Report</match>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="OnEveryRow1" type="OnEveryRowType1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Definition of type : OnEveryRowType1-->
+  <xsd:complexType name="OnEveryRowType1">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>OnEveryRow</label>
+        <match>OnEveryRow</match>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Report2" type="SubReportType2"/>
+      <xsd:element name="Report3" type="SubReportType3"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Definition of type : SubReportType2-->
+  <xsd:complexType name="SubReportType2">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>Call to SubReport OrderReport-report_all_orders.xsd</label>
+        <match>Report</match>
+        <subReport>false</subReport>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sub1:OrderReport-report_all_orders"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!--Definition of type : SubReportType3-->
+  <xsd:complexType name="SubReportType3">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>Call to SubReport OrderReport-report_all_orders.xsd</label>
+        <match>Report</match>
+        <subReport>false</subReport>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="sub2:OrderReport-report_all_orders"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

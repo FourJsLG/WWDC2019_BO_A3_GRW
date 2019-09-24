@@ -1,0 +1,76 @@
+#!/bin/bash
+# chkconfig: - 87 14
+# Source function library
+. /etc/rc.d/init.d/functions
+        # brings in daemon, killproc, & status functions (and more)
+        # These can work with a pidfile as a parameter
+        # The only thing different between init.d programs we see as examples and us
+        # is we do a pidfile check at start
+
+prog="greportwriter"
+
+export GREDIR=/opt/fourjs/gre
+progfile="/opt/fourjs/gre/bin/greinit"
+pidfile="/var/run/$prog.pid"
+lockfile="/var/lock/subsys/$prog"
+options="-l 6490"
+
+RETVAL=0
+
+start() {
+
+        #  Daemon is alreday started if pid file exists and that pid is running
+        if [ -e "$pidfile" ] && ps -p `cat "$pidfile"` 2>&1 > /dev/null; then
+                echo "$prog is already running as pid: `cat "$pidfile"`."
+                RETVAL=0
+
+        # start program with daemon.  Starts if (a) pid file does not exist, OR (b) pids in pidfile are not running
+        else
+                echo -n $"Starting $prog: "
+
+                daemon --pidfile=$pidfile $progfile $options
+                        # deamon REQUIRES progfile return, after starting daemon.
+                RETVAL=$?
+
+                # IF SUCCESSFUL, create lockfile.  greinit creates pidfile
+                [ $RETVAL -eq 0 ] && touch $lockfile
+
+                echo # daemon prints result without going to new line
+
+        fi
+
+        return $RETVAL
+}
+
+stop() {
+        echo -n $"Stopping $prog: "
+        killproc -p $pidfile $prog
+        RETVAL=$?
+        echo # killproc prints result without going to new line
+        [ $RETVAL -eq 0 ] && rm -f $lockfile
+        sleep 1
+        return $RETVAL
+}
+
+case "$1" in
+        start)
+                start
+                ;;
+        stop)
+                stop
+                ;;
+        status)
+                status -p $pidfile $prog
+                RETVAL=$?
+                ;;
+        reload|restart)
+                stop
+                start
+                ;;
+        *)
+                echo "Usage: $0 {start|stop|restart|reload}" 1>&2
+                RETVAL=2
+        ;;
+esac
+
+exit $RETVAL

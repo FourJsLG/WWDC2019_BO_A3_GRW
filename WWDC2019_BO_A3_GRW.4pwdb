@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkspaceDatabase fileContentsEncoding="fglutf8" version="3.0">
+<File n="common/lib/common.4gl" s="2" ts="20190920162644389">
+<Fct c="10" el="7" l="1" n="isgdc()" t="F" v="pub"/>
+</File>
+<File n="common/lib/globals.4gl" s="2" ts="20190923130337694"/>
+<File n="common/lib/grw.4gl" s="2" ts="20190923130337781">
+<Dep t="common/lib/common.4gl"/>
+<Fct c="10" el="91" l="79" n="dist_mode_settings(dist_mode BOOLEAN)" t="F" v="pub">
+<Call c="14" l="82" n="fgl_report_configureDistributedProcessing" t="F"/>
+<Call c="14" l="83" n="fgl_report_configureDistributedEnvironment" t="F"/>
+</Fct>
+<Fct c="10" el="77" l="49" n="viewer_settings(viewer STRING)" t="F" v="pub">
+<Call c="14" l="56" n="fgl_report_setbrowserdocumentdirectory" t="F"/>
+<Call c="14" l="58" n="fgl_report_setbrowserfontdirectory" t="F"/>
+<Call c="14" l="59" n="fgl_report_setbrowserdocumentdirectoryurl" t="F"/>
+<Call c="14" l="61" n="fgl_report_setbrowserfontdirectoryurl" t="F"/>
+<Call c="39" l="74" n="fgl_report_getbrowserurl" t="F"/>
+</Fct>
+<Fct c="10" el="47" l="14" n="report_settings(handler om.SaxDocumentHandler,report_name STRING,selected_output STRING,preview_mode BOOLEAN,dist_mode BOOLEAN,viewer STRING)" t="F" v="pub">
+<Call c="12" i="common" l="25" n="isgdc" t="F"/>
+<Call c="8" l="32" n="fgl_report_loadcurrentsettings" t="F"/>
+<Call c="14" l="33" n="fgl_report_selectdevice" t="F"/>
+<Call c="14" l="34" n="fgl_report_selectpreview" t="F"/>
+<Call c="18" l="37" n="viewer_settings" t="F"/>
+<Call c="14" l="40" n="dist_mode_settings" t="F"/>
+<Call c="23" l="42" n="fgl_report_commitcurrentsettings" t="F"/>
+</Fct>
+</File>
+<File n="01_Inline_SubReports/masterreport.4gl" s="2" ts="20190923125623416">
+<Dep t="common/lib/common.4gl"/>
+<Dep t="common/lib/globals.4gl"/>
+<Dep t="common/lib/grw.4gl"/>
+<Fct c="8" el="238" l="201" n="subreport2_all_orders(orderline RECORD)" t="R" v="pub"/>
+<Fct c="8" el="199" l="162" n="subreport1_all_orders(orderline RECORD)" t="R" v="pub"/>
+<Fct c="8" el="160" l="79" n="master_report()" t="R" v="pub">
+<Call c="26" l="110" n="subreport1_all_orders" t="R"/>
+<Call c="34" l="112" n="subreport1_all_orders" t="R"/>
+<Call c="20" l="113" n="fgl_report_geterrorstatus" t="F"/>
+<Call c="25" l="115" n="fgl_report_geterrorstring" t="F"/>
+<Call c="27" l="120" n="subreport1_all_orders" t="R"/>
+<Call c="26" l="147" n="subreport2_all_orders" t="R"/>
+<Call c="34" l="149" n="subreport2_all_orders" t="R"/>
+<Call c="20" l="150" n="fgl_report_geterrorstatus" t="F"/>
+<Call c="25" l="152" n="fgl_report_geterrorstring" t="F"/>
+<Call c="27" l="157" n="subreport2_all_orders" t="R"/>
+</Fct>
+<Fct c="10" el="77" l="69" n="run_master_report(handler om.SaxDocumentHandler)" t="F" v="pub">
+<Call c="18" l="73" n="master_report" t="R"/>
+<Call c="22" l="74" n="master_report" t="R"/>
+<Call c="19" l="75" n="master_report" t="R"/>
+</Fct>
+<Fct c="10" el="67" l="46" n="preview_report()" t="F" v="pub">
+<Call c="13" i="grw" l="53" n="report_settings" t="F"/>
+<Call c="14" l="62" n="run_master_report" t="F"/>
+</Fct>
+<Fct c="1" el="44" l="25" n="main()" t="F" v="pub">
+<Call c="18" l="35" n="preview_report" t="F"/>
+</Fct>
+</File>
+<File n="01_Inline_SubReports/subreport1.4gl" s="2" ts="20190923125623348">
+<Dep t="common/lib/common.4gl"/>
+<Dep t="common/lib/globals.4gl"/>
+<Dep t="common/lib/grw.4gl"/>
+<Fct c="8" el="149" l="112" n="report_all_orders(orderline RECORD)" t="R" v="pub"/>
+<Fct c="10" el="110" l="67" n="runreportfromdatabase(handler om.SaxDocumentHandler,orderby BOOLEAN)" t="F" v="pub">
+<Call c="18" l="95" n="report_all_orders" t="R"/>
+<Call c="26" l="97" n="report_all_orders" t="R"/>
+<Call c="12" l="98" n="fgl_report_geterrorstatus" t="F"/>
+<Call c="17" l="100" n="fgl_report_geterrorstring" t="F"/>
+<Call c="19" l="105" n="report_all_orders" t="R"/>
+<Call c="28" l="106" n="fgl_report_gettotalnumberofpages" t="F"/>
+</Fct>
+<Fct c="10" el="65" l="46" n="preview_report()" t="F" v="pub">
+<Call c="13" i="grw" l="51" n="report_settings" t="F"/>
+<Call c="14" l="60" n="runreportfromdatabase" t="F"/>
+</Fct>
+<Fct c="1" el="44" l="25" n="main()" t="F" v="pub">
+<Call c="18" l="35" n="preview_report" t="F"/>
+</Fct>
+</File>
+<File n="01_Inline_SubReports/subreport2.4gl" s="2" ts="20190923125623451">
+<Dep t="common/lib/common.4gl"/>
+<Dep t="common/lib/globals.4gl"/>
+<Dep t="common/lib/grw.4gl"/>
+<Fct c="8" el="149" l="112" n="report_all_orders(orderline RECORD)" t="R" v="pub"/>
+<Fct c="10" el="110" l="67" n="runreportfromdatabase(handler om.SaxDocumentHandler,orderby BOOLEAN)" t="F" v="pub">
+<Call c="18" l="95" n="report_all_orders" t="R"/>
+<Call c="26" l="97" n="report_all_orders" t="R"/>
+<Call c="12" l="98" n="fgl_report_geterrorstatus" t="F"/>
+<Call c="17" l="100" n="fgl_report_geterrorstring" t="F"/>
+<Call c="19" l="105" n="report_all_orders" t="R"/>
+<Call c="28" l="106" n="fgl_report_gettotalnumberofpages" t="F"/>
+</Fct>
+<Fct c="10" el="65" l="46" n="preview_report()" t="F" v="pub">
+<Call c="13" i="grw" l="51" n="report_settings" t="F"/>
+<Call c="14" l="60" n="runreportfromdatabase" t="F"/>
+</Fct>
+<Fct c="1" el="44" l="25" n="main()" t="F" v="pub">
+<Call c="18" l="35" n="preview_report" t="F"/>
+</Fct>
+</File>
+<File n="02_RichTextEdit/02_RichTextEdit.4gl" s="2" ts="20190920170452010">
+<Dep t="common/lib/common.4gl"/>
+<Fct c="8" el="63" l="57" n="richtextreport(richtext STRING,rightnow DATE)" t="R" v="pub"/>
+<Fct c="1" el="55" l="14" n="main()" t="F" v="pub">
+<Call c="20" l="38" n="fgl_report_loadcurrentsettings" t="F"/>
+<Call c="16" i="common" l="42" n="isgdc" t="F"/>
+<Call c="22" l="43" n="fgl_report_selectdevice" t="F"/>
+<Call c="22" l="45" n="fgl_report_selectdevice" t="F"/>
+<Call c="47" l="47" n="fgl_report_getbrowserurl" t="F"/>
+<Call c="31" l="49" n="fgl_report_commitcurrentsettings" t="F"/>
+<Call c="26" l="50" n="richtextreport" t="R"/>
+<Call c="30" l="51" n="richtextreport" t="R"/>
+<Call c="27" l="52" n="richtextreport" t="R"/>
+</Fct>
+</File>
+<File n="03_Distributed_Mode/03_Distributed_Mode.4gl" s="2" ts="20190923125437277">
+<Dep t="common/lib/common.4gl"/>
+<Dep t="common/lib/globals.4gl"/>
+<Dep t="common/lib/grw.4gl"/>
+<Fct c="8" el="149" l="112" n="report_all_orders(orderline RECORD)" t="R" v="pub"/>
+<Fct c="10" el="110" l="67" n="runreportfromdatabase(handler om.SaxDocumentHandler,orderby BOOLEAN)" t="F" v="pub">
+<Call c="18" l="95" n="report_all_orders" t="R"/>
+<Call c="26" l="97" n="report_all_orders" t="R"/>
+<Call c="12" l="98" n="fgl_report_geterrorstatus" t="F"/>
+<Call c="17" l="100" n="fgl_report_geterrorstring" t="F"/>
+<Call c="19" l="105" n="report_all_orders" t="R"/>
+<Call c="28" l="106" n="fgl_report_gettotalnumberofpages" t="F"/>
+</Fct>
+<Fct c="10" el="65" l="46" n="preview_report()" t="F" v="pub">
+<Call c="13" i="grw" l="51" n="report_settings" t="F"/>
+<Call c="14" l="60" n="runreportfromdatabase" t="F"/>
+</Fct>
+<Fct c="1" el="44" l="25" n="main()" t="F" v="pub">
+<Call c="18" l="35" n="preview_report" t="F"/>
+</Fct>
+</File>
+<File n="05_Schema_Transformation/05_Schema_Transformation.4gl" s="2" ts="20190923125623487">
+<Dep t="common/lib/common.4gl"/>
+<Dep t="common/lib/globals.4gl"/>
+<Dep t="common/lib/grw.4gl"/>
+<Fct c="8" el="165" l="152" n="report_all_orders_notordered(orderline RECORD)" t="R" v="pub"/>
+<Fct c="8" el="150" l="113" n="report_all_orders(orderline RECORD)" t="R" v="pub"/>
+<Fct c="10" el="111" l="68" n="runreportfromdatabase(handler om.SaxDocumentHandler,orderby BOOLEAN)" t="F" v="pub">
+<Call c="18" l="96" n="report_all_orders_notordered" t="R"/>
+<Call c="26" l="98" n="report_all_orders_notordered" t="R"/>
+<Call c="12" l="99" n="fgl_report_geterrorstatus" t="F"/>
+<Call c="17" l="101" n="fgl_report_geterrorstring" t="F"/>
+<Call c="19" l="106" n="report_all_orders_notordered" t="R"/>
+<Call c="28" l="107" n="fgl_report_gettotalnumberofpages" t="F"/>
+</Fct>
+<Fct c="10" el="66" l="47" n="preview_report()" t="F" v="pub">
+<Call c="13" i="grw" l="52" n="report_settings" t="F"/>
+<Call c="14" l="61" n="runreportfromdatabase" t="F"/>
+</Fct>
+<Fct c="1" el="45" l="26" n="main()" t="F" v="pub">
+<Call c="18" l="36" n="preview_report" t="F"/>
+</Fct>
+</File>
+<File n="06_Templates/06_Templates.4gl" s="2" ts="20190923162450671">
+<Dep t="common/lib/common.4gl"/>
+<Dep t="common/lib/grw.4gl"/>
+<Fct c="10" el="163" l="123" n="create_tables()" t="F" v="pub"/>
+<Fct c="8" el="121" l="106" n="report_candidates(ballot RECORD)" t="R" v="pub"/>
+<Fct c="10" el="104" l="74" n="run_candidates_report(handler om.SaxDocumentHandler)" t="F" v="pub">
+<Call c="10" l="81" n="create_tables" t="F"/>
+<Call c="18" l="90" n="report_candidates" t="R"/>
+<Call c="26" l="92" n="report_candidates" t="R"/>
+<Call c="12" l="93" n="fgl_report_geterrorstatus" t="F"/>
+<Call c="17" l="95" n="fgl_report_geterrorstring" t="F"/>
+<Call c="19" l="100" n="report_candidates" t="R"/>
+</Fct>
+<Fct c="10" el="72" l="53" n="preview_report()" t="F" v="pub">
+<Call c="13" i="grw" l="58" n="report_settings" t="F"/>
+<Call c="14" l="67" n="run_candidates_report" t="F"/>
+</Fct>
+<Fct c="1" el="51" l="32" n="main()" t="F" v="pub">
+<Call c="18" l="42" n="preview_report" t="F"/>
+</Fct>
+</File>
+</WorkspaceDatabase>

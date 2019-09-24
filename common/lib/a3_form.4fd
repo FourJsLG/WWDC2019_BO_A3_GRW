@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm fileVersion="31400" gstVersion="31405" name="managedform" uid="{58cd833a-878e-4989-bf44-ddcc1c65fe92}">
+  <AGSettings>
+    <DynamicProperties version="2"/>
+  </AGSettings>
+  <Record name="record1" uid="{ee5ccd53-79c6-4595-ad09-bb745ab6c5f4}">
+    <RecordField defaultValue="PDF" fieldIdRef="1" name="selected_output" uid="{58678f6e-e39f-428b-aee6-9d6b276e72a1}"/>
+  </Record>
+  <Form gridHeight="13" gridWidth="36" name="form" text="Form">
+    <VBox gridHeight="11" gridWidth="33" name="vbox1" posX="1" posY="1">
+      <Grid gridHeight="9" gridWidth="33" name="grid1" posX="0" posY="1">
+        <RadioGroup defaultValue="PDF" fieldId="1" gridHeight="4" gridWidth="21" items="HTML, Report Viewer, PDF, Excel" name="selected_output" notNull="true" posX="2" posY="1" required="true" tabIndex="-1" title="radiogroup1" widget="RadioGroup">
+          <Item lstrtext="false" name="HTML" text="HTML"/>
+          <Item lstrtext="false" name="ReportViewer" text="Report Viewer"/>
+          <Item lstrtext="false" name="PDF" text="PDF"/>
+          <Item lstrtext="false" name="XLS" text="Excel"/>
+        </RadioGroup>
+        <Button gridHeight="1" gridWidth="10" name="preview" posX="2" posY="5" tabIndex="-1" text="preview"/>
+        <Button gridHeight="1" gridWidth="10" name="quit" posX="13" posY="5" tabIndex="-1" text="quit"/>
+      </Grid>
+    </VBox>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewBlAGUANQBjAGMAZAA1ADMALQA3ADkAYwA2AC0ANAA1ADkANQAtAGEAZAAwADkALQBiAGIANwA0ADUAYQBiADYAYwA1AGYANAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<P xmlns="http://www.4js.com/2004/PXML">
+    <TEXT text="CSS Template"/>
+</P>
+<PROPAGATINGBOX width="min" length="rest" lengthAdjustment="shrinkToChildren" margin="6.0" class="grwBodyBox" fontName="Arial" xmlns="http://www.4js.com/2004/PXML">
+    <BORDERBOX marginTopWidth="0.67*length(&quot;M&quot;)" marginBottomWidth="0.67*length(&quot;M&quot;)">
+        <P fontSize="150%" fontBold="true">
+            <TEXT text="CSS Layout Float"/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P>
+            <TEXT text="In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other."/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P>
+            <TEXT text="Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)"/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="0.67*length(&quot;M&quot;)" marginBottomWidth="0.67*length(&quot;M&quot;)">
+        <P fontSize="150%" fontBold="true">
+            <TEXT text="Cities"/>
+        </P>
+    </BORDERBOX>
+    <UL>
+        <LI>
+            <P>
+                <TEXT color="blue" underline="true" href="#" text="London"/>
+            </P>
+        </LI>
+        <LI>
+            <P>
+                <TEXT color="blue" underline="true" href="#" text="Paris"/>
+            </P>
+        </LI>
+        <LI>
+            <P>
+                <TEXT color="blue" underline="true" href="#" text="Tokyo"/>
+            </P>
+        </LI>
+    </UL>
+    <BORDERBOX marginTopWidth="0.67*length(&quot;M&quot;)" marginBottomWidth="0.67*length(&quot;M&quot;)">
+        <P fontSize="200%" fontBold="true">
+            <TEXT text="London"/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P>
+            <TEXT text="London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants."/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P>
+            <TEXT text="Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium."/>
+        </P>
+    </BORDERBOX>
+    <BORDERBOX marginTopWidth="length(&quot;M&quot;)" marginBottomWidth="length(&quot;M&quot;)">
+        <P>
+            <TEXT text="Footer"/>
+        </P>
+    </BORDERBOX>
+</PROPAGATINGBOX>

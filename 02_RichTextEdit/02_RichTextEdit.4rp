@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report:Report xmlns:rtl="http://www.4js.com/2004/RTL" xmlns:report="http://www.4js.com/2007/REPORT" xmlns="http://www.4js.com/2004/PXML" gstVersion="31405" version="6.00">
+    <report:Settings RWPageWidth="a4width" RWPageLength="a4length" RWLeftMargin="1.3cm" RWTopMargin="1.3cm" RWRightMargin="1.3cm" RWBottomMargin="1.3cm">
+        <report:FormatList>
+            <report:Format-SVG/>
+            <report:Format-PDF/>
+            <report:Format-image/>
+        </report:FormatList>
+    </report:Settings>
+    <report:Data RWDataLocation="02_RichTextEdit.rdd" RWFglReportName="richtextreport"/>
+    <report:Conflicts/>
+    <rtl:stylesheet>
+        <PXML>
+            <rtl:match name="Report" nameConstraint="Report" minOccurs="1" maxOccurs="1">
+                <MINIPAGE name="Page Root" width="max" length="max" alignment="near">
+                    <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded">
+                        <MINIPAGE name="MiniPage" width="min" length="min" alignment="near">
+                            <MINIPAGE name="MiniPage1" width="min" length="max" alignment="near" layoutDirection="leftToRight">
+                                <WORDBOX name="WordBox" alignment="near" fontSize="12" fontBold="true" floatingBehavior="enclosed" text="Date Format "/>
+                                <rtl:input-variable name="rightnow" type="FGLString" expectedLocation="expectedHere"/>
+                                <DATEFORMATBOX name="rightnow Value" class="grwDateValue" alignment="near" floatingBehavior="enclosed" format="mmm-dd-yyyy" value="{{Date.fromIsoValue(rightnow.isoValue)}}"/>
+                            </MINIPAGE>
+                            <MINIPAGE name="MiniPage2" width="min" length="max" alignment="near" layoutDirection="leftToRight">
+                                <WORDBOX name="WordBox1" alignment="near" fontSize="12" fontBold="true" floatingBehavior="enclosed" text="Paragraph "/>
+                                <P name="Paragraph" alignment="far" floatingBehavior="enclosed" indent="-10" hang="0" align="left">
+                                    <TEXT name="Text1" alignment="baseline" text="[fontName=Roboto,Helvetica,Arial,sans-serif]Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.&#10;Test of another paragraph"/>
+                                </P>
+                            </MINIPAGE>
+                            <rtl:input-variable name="richtext" type="FGLString" expectedLocation="expectedHere"/>
+                            <RICHTEXTBOX name="RichTextBox" width="width(&quot;M&quot;)*20" alignment="baseline" floatingBehavior="enclosed" type="html" url="{{&quot;data:text/html,&quot;+(&quot;&lt;html&gt;&quot;+richtext+&quot;&lt;/html&gt;&quot;).urlEncode()}}"/>
+                            <RICHTEXTBOX name="RichTextBox1" width="width(&quot;M&quot;)*20" length="min" floatingBehavior="enclosed" type="html" url="cities.html"/>
+                        </MINIPAGE>
+                    </rtl:match>
+                </MINIPAGE>
+            </rtl:match>
+        </PXML>
+    </rtl:stylesheet>
+</report:Report>

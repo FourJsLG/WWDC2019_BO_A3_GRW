@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<?PipeConfiguratorStyleSheet reportFileName="02_RichTextEdit.4rp" outputDevice="SVG" localizationExecutableName="a3_02_main" localizationFourRpName="02_RichTextEdit" fglppid="SOCRATES:10908" clientHost="localhost" clientPort="6432" debugLevel="9"?>
+<Report name="02_RichTextEdit.richtextreport" headerLength="0" trailerLength="0" pageLength="66" topMargin="3" bottomMargin="3" leftMargin="5" rightMargin="132" xmlns="http://www.4js.com/2004/REPORT">
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <PageHeader pageNo="1"/>
+    <OnEveryRow>
+        <Print>
+            <Item name="richtext" type="STRING" value="&lt;h1 style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;span style=&quot;color:#0066cc;font-size:34px&quot;&gt;Vegan Tikka Masala&lt;/span&gt;&lt;/h1&gt;&lt;p style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;strong style=&quot;font-size:20px&quot;&gt;&lt;u&gt;Prep Time:&lt;/u&gt;&lt;/strong&gt;&lt;span style=&quot;font-size:20px&quot;&gt; 15 minutes&lt;/span&gt;&lt;/p&gt;"/>
+            <Item name="rightnow" type="DATE" value="09/17/2019" isoValue="2019-09-17"/>
+        </Print>
+    </OnEveryRow>
+    <OnLastRow/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <Skip/>
+    <PageTrailer/>
+</Report>

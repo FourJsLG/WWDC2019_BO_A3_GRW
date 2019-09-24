@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm fileVersion="31400" gstVersion="31405" name="ManagedForm" uid="{651d97a4-8e97-4c02-8822-899b40fbdff6}">
+  <AGSettings>
+    <DynamicProperties version="2">
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the autoflush action name" initialValue="" isDefaultInherited="false" isHidden="false" label="autoflush" name="webcomponent.fglrichtext.autoflush" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the delay between autoflush action trigger in second(s)" initialValue="10" isDefaultInherited="false" isHidden="false" label="autoflush_interval" name="webcomponent.fglrichtext.autoflush_interval" readOnly="false" type="INTEGER"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the default font family" initialValue="" isDefaultInherited="false" isHidden="false" label="font_family" name="webcomponent.fglrichtext.font_family" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the default font size" initialValue="13px" isDefaultInherited="false" isHidden="false" label="font_size" name="webcomponent.fglrichtext.font_size" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the for the toolbar&apos;s heading dropdown items" initialValue="" isDefaultInherited="false" isHidden="false" label="labels_toolbar_formatselect" name="webcomponent.fglrichtext.labels_toolbar_formatselect" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the text for the toolbar&apos;s linespacing dropdown items" initialValue="" isDefaultInherited="false" isHidden="false" label="labels_toolbar_linespacing" name="webcomponent.fglrichtext.labels_toolbar_linespacing" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the text for the link insert box" initialValue="" isDefaultInherited="false" isHidden="false" label="labels_toolbar_link" name="webcomponent.fglrichtext.labels_toolbar_link" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set the tooltips of the toolbar" initialValue="" isDefaultInherited="false" isHidden="false" label="labels_toolbar_tooltips" name="webcomponent.fglrichtext.labels_toolbar_tooltips" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Set to &apos;browser&apos; to use browser spellchecker, or &apos;none&apos; for no spell checking" initialValue="browser" isDefaultInherited="false" isHidden="false" label="spellcheck" name="webcomponent.fglrichtext.spellcheck" readOnly="false" type="TEXT"/>
+      <DynamicProperty BRDynamicPropertyType="false" description="Defines the tools to be included in the fglrichtext toolbar" editorInfo="title:toolbar;description:fglrichtext toolbar;icon:document;reorder:true;contains:undo|redo|formatselect|bold|italic|underline|strikethrough|color|removeformat|fontselect|fontsizeselect|alignleft|alignright|aligncenter|alignjustify|alignnone|indent|outdent|bullist|numlist|insert|image|linespacing" initialValue="bold||italic||underline" isDefaultInherited="false" isHidden="false" label="toolbar" name="webcomponent.fglrichtext.toolbar" perRendering="JOIN_WITH_|" readOnly="false" type="MULTIPLEBOOLEAN"/>
+    </DynamicProperties>
+    <NodeInfos version="1">
+      <NodeInfo mimeType="modFD/WebComponent" properties="webcomponent.fglrichtext.toolbar;webcomponent.fglrichtext.spellcheck;webcomponent.fglrichtext.labels_toolbar_tooltips;webcomponent.fglrichtext.labels_toolbar_link;webcomponent.fglrichtext.labels_toolbar_linespacing;webcomponent.fglrichtext.labels_toolbar_formatselect;webcomponent.fglrichtext.font_size;webcomponent.fglrichtext.font_family;webcomponent.fglrichtext.autoflush;webcomponent.fglrichtext.autoflush_interval"/>
+    </NodeInfos>
+  </AGSettings>
+  <Record name="record1" uid="{748972de-15ab-45ff-ac72-a1d7d608becd}">
+    <RecordField colName="richtext" fieldIdRef="0" name="richtext" sqlTabName="formonly" uid="{b0e239a7-e373-413a-a3bd-3f61ec12f45d}"/>
+    <RecordField colName="info" fieldIdRef="1" name="info" sqlTabName="formonly" uid="{8cd5f1c4-7574-4fc8-bf40-0cccd0458248}"/>
+  </Record>
+  <Form gridHeight="5" gridWidth="25" minHeight="20" minWidth="80" name="richtext" text="Rich Text">
+    <Grid gridHeight="5" gridWidth="25" name="grid1" posX="0" posY="0">
+      <WebComponent colName="richtext" componentType="fglrichtext" fieldId="0" gridHeight="4" gridWidth="23" name="richtext" posX="1" posY="0" scrollBars="none" sizePolicy="fixed" sqlTabName="formonly" stretch="both" tabIndex="1" unitWidth="characters" widget="WebComponent" width="23">
+        <DynamicProperty name="webcomponent.fglrichtext.spellcheck" value="browser"/>
+        <DynamicProperty name="webcomponent.fglrichtext.toolbar" value="undo;redo;formatselect;bold;italic;underline;strikethrough;color;removeformat;fontselect;fontsizeselect;alignleft;alignright;aligncenter;alignjustify;alignnone;indent;bullist;numlist;insert;image;linespacing;outdent"/>
+      </WebComponent>
+      <Edit colName="info" fieldId="1" gridHeight="1" gridWidth="23" name="info" posX="1" posY="4" scroll="true" sqlTabName="formonly" tabIndex="2" widget="Edit"/>
+    </Grid>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewA3ADQAOAA5ADcAMgBkAGUALQAxADUAYQBiAC0ANAA1AGYAZgAtAGEAYwA3ADIALQBhADEAZAA3AGQANgAwADgAYgBlAGMAZAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>
