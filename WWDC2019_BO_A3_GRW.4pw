@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Project defaultApplication="253063750" gstVersion="31405" version="3.3">
+<Project defaultApplication="319347990" gstVersion="31405" version="3.3">
   <Settings>
     <DynamicProperties version="2">
       <DynamicProperty description="Accent color (Android 5.0 and later)" initialValue="#9575CD" isDefaultInherited="false" isHidden="false" label="Accent color" name="gma-accent-color" readOnly="false" type="COLOR"/>
@@ -161,6 +161,7 @@
         <VirtualFolder label="res"/>
         <VirtualFolder label="rpt">
           <File filePath="06_Templates/06_Templates.4rp"/>
+          <File filePath="06_Templates/Testtpl.4rp"/>
         </VirtualFolder>
         <VirtualFolder label="src">
           <File compilerOptions="--build-rdd" filePath="06_Templates/06_Templates.4gl"/>
