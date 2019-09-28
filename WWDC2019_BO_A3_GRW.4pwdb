@@ -57,7 +57,7 @@
 <Call c="18" l="35" n="preview_report" t="F"/>
 </Fct>
 </File>
-<File n="01_Inline_SubReports/subreport1.4gl" s="2" ts="20190923125623348">
+<File n="01_Inline_SubReports/subreport1.4gl" s="2" ts="20190927185449984">
 <Dep t="common/lib/common.4gl"/>
 <Dep t="common/lib/globals.4gl"/>
 <Dep t="common/lib/grw.4gl"/>
@@ -78,11 +78,11 @@
 <Call c="18" l="35" n="preview_report" t="F"/>
 </Fct>
 </File>
-<File n="01_Inline_SubReports/subreport2.4gl" s="2" ts="20190923125623451">
+<File n="01_Inline_SubReports/subreport2.4gl" s="2" ts="20190927185630215">
 <Dep t="common/lib/common.4gl"/>
 <Dep t="common/lib/globals.4gl"/>
 <Dep t="common/lib/grw.4gl"/>
-<Fct c="8" el="149" l="112" n="report_all_orders(orderline RECORD)" t="R" v="pub"/>
+<Fct c="8" el="150" l="112" n="report_all_orders(orderline RECORD)" t="R" v="pub"/>
 <Fct c="10" el="110" l="67" n="runreportfromdatabase(handler om.SaxDocumentHandler,orderby BOOLEAN)" t="F" v="pub">
 <Call c="18" l="95" n="report_all_orders" t="R"/>
 <Call c="26" l="97" n="report_all_orders" t="R"/>
@@ -99,7 +99,7 @@
 <Call c="18" l="35" n="preview_report" t="F"/>
 </Fct>
 </File>
-<File n="02_RichTextEdit/02_RichTextEdit.4gl" s="2" ts="20190920170452010">
+<File n="02_RichTextEdit/02_RichTextEdit.4gl" s="2" ts="20190928001625407">
 <Dep t="common/lib/common.4gl"/>
 <Fct c="8" el="63" l="57" n="richtextreport(richtext STRING,rightnow DATE)" t="R" v="pub"/>
 <Fct c="1" el="55" l="14" n="main()" t="F" v="pub">

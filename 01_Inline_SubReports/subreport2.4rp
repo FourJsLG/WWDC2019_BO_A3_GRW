@@ -15,15 +15,15 @@
                 <MINIPAGE name="MiniPage1" width="max" length="max">
                     <MAPCHART name="Mapchart2" swapX="false" title="Revenue Distribution by Customers" keysTitle="Insert keys title here" valuesTitle="Insert values title here" drawAs="Pie3D">
                         <rtl:match name="Group userid" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
-                            <rtl:match name="Group orderid" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
-                                <rtl:match name="Group linenum" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
-                                    <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded">
-                                        <rtl:input-variable name="orderline.orders.shipfirstname" type="FGLString" expectedLocation="expectedHere"/>
-                                        <rtl:input-variable name="orderline.orders.shiplastname" type="FGLString" expectedLocation="expectedHere"/>
-                                        <rtl:input-variable name="orderline.lineitem.unitprice" type="FGLNumeric" expectedLocation="expectedHere"/>
-                                        <ITEM key="{{orderline.orders.shipfirstname.trim()+&quot; &quot;+orderline.orders.shiplastname.trim()}}" value="{{orderline.lineitem.unitprice}}" name="Item2"/>
+                            <rtl:match name="Group country" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
+                                <rtl:match name="Group orderid" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
+                                    <rtl:match name="Group linenum" nameConstraint="Group" minOccurs="0" maxOccurs="unbounded">
+                                        <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded"/>
                                     </rtl:match>
                                 </rtl:match>
+                                <rtl:input-variable name="orderline.orders.shipfirstname" type="FGLString" expectedLocation="expectedBefore"/>
+                                <rtl:input-variable name="orderline.orders.shiplastname" type="FGLString" expectedLocation="expectedBefore"/>
+                                <ITEM key="{{orderline.orders.shipfirstname.trim()+&quot; &quot;+orderline.orders.shiplastname.trim()}}" name="Item2"/>
                             </rtl:match>
                         </rtl:match>
                     </MAPCHART>

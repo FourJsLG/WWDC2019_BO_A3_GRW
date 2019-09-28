@@ -91,7 +91,7 @@ function runreportfromdatabase(handler, orderby)
                     and country.code = orders.billcountry
                 order by orders.userid, orders.orderid, lineitem.linenum
     end if
-
+                
     start report report_all_orders to xml handler handler
     foreach c_order into orderline.*
         output to report report_all_orders(orderline.*)

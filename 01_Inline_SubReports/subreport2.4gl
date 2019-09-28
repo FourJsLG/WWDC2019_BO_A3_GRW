@@ -89,7 +89,7 @@ function runreportfromdatabase(handler, orderby)
                     and item.productid = product.productid
                     and product.catid = category.catid
                     and country.code = orders.billcountry
-                order by orders.userid, orders.orderid, lineitem.linenum
+                order by orders.userid, account.country, orders.orderid, lineitem.linenum
     end if
 
     start report report_all_orders to xml handler handler
@@ -117,9 +117,10 @@ report report_all_orders(orderline)
         usertotal like orders.totalprice,
         ordertotal like orders.totalprice
 
-    order external by orderline.orders.userid,
-        orderline.orders.orderid,
-        orderline.lineitem.linenum
+    order external by   orderline.orders.userid,
+                        orderline.account.country,
+                        orderline.orders.orderid,
+                        orderline.lineitem.linenum
 
     format
         first page header
