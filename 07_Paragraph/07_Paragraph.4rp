@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report:Report xmlns:rtl="http://www.4js.com/2004/RTL" xmlns:report="http://www.4js.com/2007/REPORT" xmlns="http://www.4js.com/2004/PXML" gstVersion="31405" version="6.00">
+    <report:Settings RWPageWidth="letterwidth" RWPageLength="letterlength" RWLeftMargin="0.5inch" RWTopMargin="0.5inch" RWRightMargin="0.5inch" RWBottomMargin="0.5inch">
+        <report:FormatList>
+            <report:Format-SVG/>
+            <report:Format-PDF/>
+            <report:Format-image/>
+        </report:FormatList>
+    </report:Settings>
+    <report:Data RWDataLocation="07_Paragraph.rdd" RWFglReportName="paragraphreport"/>
+    <report:Conflicts/>
+    <rtl:stylesheet>
+        <PXML>
+            <rtl:match name="Report" nameConstraint="Report" minOccurs="1" maxOccurs="1">
+                <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded"/>
+                <MINIPAGE name="Page Root" width="max" length="max" alignment="near">
+                    <MINIPAGE name="MiniPage" width="min" length="min">
+                        <MINIPAGE name="MiniPage1" width="min" length="max" alignment="near" layoutDirection="rightToLeft">
+                            <rtl:input-variable name="rightnow" type="FGLString" expectedLocation="expectedBefore"/>
+                            <DATEFORMATBOX name="rightnow Value" class="grwDateValue" x="5.6789" y="73.8897" anchorX="0.5" anchorY="1" floatingBehavior="enclosed" format="{{&quot;mmm-dd-yyyy&quot;}}" value="{{Date.fromIsoValue(rightnow.isoValue)}}"/>
+                        </MINIPAGE>
+                        <MINIPAGE name="MiniPage2" width="1cm" length="max" layoutDirection="leftToRight"/>
+                        <P name="Paragraph" floatingBehavior="enclosed" indent="-20">
+                            <rtl:input-variable name="paragraph" type="FGLString" expectedLocation="expectedBefore"/>
+                            <TEXT name="Blue" color="#0000ff" text="{{paragraph.trim()}}"/>
+                            <BR name="Break"/>
+                            <rtl:input-variable name="paragraph" type="FGLString" expectedLocation="expectedBefore"/>
+                            <TEXT name="Red" color="#ff0000" text="{{paragraph.trim()}}"/>
+                            <rtl:input-variable name="paragraph" type="FGLString" expectedLocation="expectedBefore"/>
+                            <TEXT name="Green" color="#00aa00" text="{{paragraph.trim()}}"/>
+                        </P>
+                        <P name="Paragraph1" floatingBehavior="enclosed" indent="-50">
+                            <rtl:input-variable name="paragraph" type="FGLString" expectedLocation="expectedBefore"/>
+                            <TEXT name="Orange" color="#ffaa00" text="{{paragraph.trim()}}"/>
+                        </P>
+                    </MINIPAGE>
+                </MINIPAGE>
+            </rtl:match>
+        </PXML>
+    </rtl:stylesheet>
+</report:Report>

@@ -22,6 +22,8 @@ end record
 define a3_06
     ReportSettings
     = (report_name: "a3_05_simple.4rp",
+        --selected_output: "PDF",
+        --selected_output: "Input XML",
         selected_output: "Transformed XML",
         preview_mode: true,
         dist_mode: false,
@@ -35,7 +37,7 @@ main
             call preview_report()
 
         on action quit
-            exit input
+            exit menu
 
     end menu
 
@@ -72,15 +74,11 @@ function run_simple_report(handler)
     call create_tables()
 
     declare c_simple cursor for
-        select  cand_info.*,
-                cand_votes.*
-            from cand_info, cand_votes
-            where cand_info.cand_info_id = cand_votes.cand_votes_selection
-        order by cand_info.cand_info_id, cand_votes.cand_votes_id
+        select  * from tb_simple
 
-    start report report_candidates to xml handler handler
+    start report report_rst to xml handler handler
     foreach c_simple into r_simple.*
-        output to report report_candidates(r_simple.*)
+        output to report report_rst(r_simple.*)
         if fgl_report_geterrorstatus() then
             display "fgl: stopping report, msg=\"",
                 fgl_report_geterrorstring(),
@@ -88,13 +86,13 @@ function run_simple_report(handler)
             exit foreach
         end if
     end foreach
-    finish report report_candidates
+    finish report report_rst
 
     close c_simple
 
 end function
 
-report report_candidates(simple)
+report report_rst(simple)
 
     define simple SimpleType
        
@@ -106,8 +104,6 @@ report report_candidates(simple)
 end report
 
 function create_tables()
-
-    define i, v smallint
 
     display "creating tables..."
 
@@ -122,15 +118,13 @@ function create_tables()
         simple_id smallint,
         simple_value int)
 
-    insert into cand_info values(1, 1, 50)
-    insert into cand_info values(2, 1, 150)
-    insert into cand_info values(3, 1, 100)
-    insert into cand_info values(4, 1, 50)
-    insert into cand_info values(5, 1, 100)
-    insert into cand_info values(5, 1, 150)
-    insert into cand_info values(5, 1, 100)
-    insert into cand_info values(5, 1, 100)
-    insert into cand_info values(5, 1, 100) 
-    insert into cand_info values(5, 1, 100)
+    insert into tb_simple values(1, 1, 50)
+    insert into tb_simple values(2, 2, 150)
+    insert into tb_simple values(3, 1, 100)
+    insert into tb_simple values(4, 2, 50)
+    insert into tb_simple values(5, 1, 100)
+    insert into tb_simple values(6, 1, 150)
+    insert into tb_simple values(7, 1, 100)
+    insert into tb_simple values(8, 2, 100)
 
 end function

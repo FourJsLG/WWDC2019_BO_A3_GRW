@@ -12,6 +12,8 @@
 import fgl common
 import fgl globals
 import fgl grw
+import fgl report1
+import fgl report2
 
 schema "officestore"
 
@@ -156,83 +158,5 @@ report master_report()
             end foreach
             finish report subreport2_all_orders
             close c2_order
-
-end report
-
-report subreport1_all_orders(orderline)
-    define
-        orderline ordertype,
-        lineitemprice like lineitem.unitprice,
-        overalltotal like orders.totalprice,
-        usertotal like orders.totalprice,
-        ordertotal like orders.totalprice
-
-    order external by orderline.orders.userid,
-        orderline.orders.orderid,
-        orderline.lineitem.linenum
-
-    format
-        first page header
-            let overalltotal = 0
-
-        before group of orderline.orders.userid
-            display "user " || orderline.orders.userid
-            let usertotal = 0
-
-        before group of orderline.orders.orderid
-            display "    order " || orderline.orders.orderid
-            let ordertotal = 0
-
-        on every row
-            display "        every row " || orderline.lineitem.linenum
-            let lineitemprice =
-                orderline.lineitem.unitprice * orderline.lineitem.quantity
-            let overalltotal = overalltotal + lineitemprice
-            let usertotal = usertotal + lineitemprice
-            let ordertotal = ordertotal + lineitemprice
-            print orderline.*,
-                lineitemprice,
-                overalltotal,
-                usertotal,
-                ordertotal
-
-end report
-
-report subreport2_all_orders(orderline)
-    define
-        orderline ordertype,
-        lineitemprice like lineitem.unitprice,
-        overalltotal like orders.totalprice,
-        usertotal like orders.totalprice,
-        ordertotal like orders.totalprice
-
-    order external by orderline.orders.userid,
-        orderline.orders.orderid,
-        orderline.lineitem.linenum
-
-    format
-        first page header
-            let overalltotal = 0
-
-        before group of orderline.orders.userid
-            display "user " || orderline.orders.userid
-            let usertotal = 0
-
-        before group of orderline.orders.orderid
-            display "    order " || orderline.orders.orderid
-            let ordertotal = 0
-
-        on every row
-            display "        every row " || orderline.lineitem.linenum
-            let lineitemprice =
-                orderline.lineitem.unitprice * orderline.lineitem.quantity
-            let overalltotal = overalltotal + lineitemprice
-            let usertotal = usertotal + lineitemprice
-            let ordertotal = ordertotal + lineitemprice
-            print orderline.*,
-                lineitemprice,
-                overalltotal,
-                usertotal,
-                ordertotal
 
 end report

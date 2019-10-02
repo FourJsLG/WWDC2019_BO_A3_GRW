@@ -23,8 +23,7 @@ end record
 
 define a3_06
     ReportSettings
-    = (report_name: "Testtpl.4rp",
-    --= (report_name: "06_Templates.4rp",
+    = (report_name: "06_Templates.4rp",
     --= (report_name: NULL,
         preview_mode: true,
         dist_mode: false,

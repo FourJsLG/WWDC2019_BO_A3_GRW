@@ -2,28 +2,33 @@
 <WorkspaceViewState version="1.0">
   <ExpandedNodes>
     <Node path="WWDC2019_BO_A3_GRW.4pw" type="pm/main-project"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/common" type="pm/group"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/common/db" type="pm/library"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples" type="pm/group"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/01_Inline_SubReports" type="pm/group"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/01_Inline_SubReports/a3_01_master" type="pm/application"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/01_Inline_SubReports/a3_01_master/rpt" type="pm/virtual-folder"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/01_Inline_SubReports/a3_01_subreport1/src" type="pm/virtual-folder"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/01_Inline_SubReports/a3_01_subreport2/rpt" type="pm/virtual-folder"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/01_Inline_SubReports/a3_01_subreport2/src" type="pm/virtual-folder"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/02_RichTextEdit" type="pm/group"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/02_RichTextEdit/a3_02_main/res" type="pm/virtual-folder"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/03_Distributed_Mode/a3_03_main/src" type="pm/virtual-folder"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/03_Distributed_Mode/dist_mode/reports" type="pm/virtual-folder"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation" type="pm/group"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_main" type="pm/application"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_simple" type="pm/application"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_main/rpt" type="pm/virtual-folder"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_main/rst" type="pm/virtual-folder"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_main/src" type="pm/virtual-folder"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_simple/rpt" type="pm/virtual-folder"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_simple/rst" type="pm/virtual-folder"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/05_Schema_Transformation/a3_05_simple/src" type="pm/virtual-folder"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/06_Templates" type="pm/group"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/06_Templates/a3_06_main" type="pm/application"/>
-    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/06_Templates/a3_06_main/rpt" type="pm/virtual-folder"/>
     <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/06_Templates/a3_06_main/src" type="pm/virtual-folder"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/06_Templates/a3_06_main/tpl" type="pm/virtual-folder"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/07_Paragraph" type="pm/group"/>
+    <Node path="WWDC2019_BO_A3_GRW.4pw/Samples/07_Paragraph/a3_07_main/src" type="pm/virtual-folder"/>
   </ExpandedNodes>
   <OpenDocuments>
-    <Document container="true" filePath="05_Schema_Transformation/a3_05_simple.4gl" locator="1:1" module="mod-ce3">
-      <Data name="8" value="CP1252"/>
+    <Document container="true" filePath="01_Inline_SubReports/masterreport.4rp" locator="" module="mod-rw"/>
+    <Document container="true" filePath="C:/Users/LaurentGalais/Documents/Applications/FourJs/GRWTemplates/simple-rpt2.rsd" locator="1:1" module="mod-ce3">
+      <Data name="8" value="utf-8"/>
     </Document>
   </OpenDocuments>
-  <CurrentDocument filePath="05_Schema_Transformation/a3_05_simple.4gl" module="mod-ce3"/>
+  <CurrentDocument filePath="C:\Users\LaurentGalais\Documents\Applications\FourJs\GRWTemplates\simple-rpt2.rsd" module="mod-ce3"/>
 </WorkspaceViewState>

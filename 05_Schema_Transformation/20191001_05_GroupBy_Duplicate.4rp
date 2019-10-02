@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report:Report xmlns:rtl="http://www.4js.com/2004/RTL" xmlns:report="http://www.4js.com/2007/REPORT" xmlns="http://www.4js.com/2004/PXML" gstVersion="31405" version="6.00">
+    <report:Settings RWPageWidth="a4width" RWPageLength="a4length" RWLeftMargin="1.3cm" RWTopMargin="1.3cm" RWRightMargin="1.3cm" RWBottomMargin="1.3cm">
+        <report:FormatList>
+            <report:Format-SVG/>
+            <report:Format-PDF/>
+            <report:Format-image/>
+        </report:FormatList>
+    </report:Settings>
+    <report:Data RWDataLocation="05_GroupBy_Duplicate.rst" RWFglReportName="report_all_orders_notordered"/>
+    <report:Conflicts>
+        <report:Conflict nodeName="Page Chart" message="Node was in trigger &quot;Report1&quot;, but trigger was removed during schema update"/>
+        <report:Conflict nodeName="Page List" message="Node was in trigger &quot;Report2&quot;, but trigger was removed during schema update"/>
+        <report:Conflict nodeName="Summary" message="Node was in trigger &quot;GroupUserid [0; unbounded]&quot;, but trigger was removed during schema update"/>
+        <report:Conflict nodeName="Intro" message="Node was in trigger &quot;GroupUserid [0; unbounded]&quot;, but trigger was removed during schema update"/>
+        <report:Conflict nodeName="Table Row" message="Node was in trigger &quot;GroupUserid [0; unbounded]&quot;, but trigger was removed during schema update"/>
+        <report:Conflict nodeName="Summary_aggr" message="Node was in trigger &quot;GroupUserid [0; unbounded]&quot;, but trigger was removed during schema update"/>
+        <report:Conflict nodeName="separator8" message="Node was in trigger &quot;GroupUserid [0; unbounded]&quot;, but trigger was removed during schema update"/>
+    </report:Conflicts>
+    <rtl:stylesheet>
+        <PXML>
+            <rtl:match name="Reports" nameConstraint="Reports" minOccurs="1" maxOccurs="1">
+                <MINIPAGE name="Document Root" width="max" length="max" fontSize="12">
+                    <rtl:match name="Report1" nameConstraint="Report1" minOccurs="1" maxOccurs="1">
+                        <MINIPAGE name="Page Chart" width="max" length="max">
+                            <LAYOUTNODE name="Page Header 2" width="max" length="min" port="anyPageHeader">
+                                <MINIPAGE name="MiniPage7" width="min" length="max" layoutDirection="leftToRight">
+                                    <IMAGEBOX name="ImageBox2" width="max" floatingBehavior="enclosed" url="LogoFourJs.png" intendedResolution="96"/>
+                                </MINIPAGE>
+                                <LAYOUTNODE name="separator6" width="0.5cm" length="max" layoutDirection="leftToRight"/>
+                            </LAYOUTNODE>
+                            <LAYOUTNODE name="Page Footer 2" width="max" length="min" port="anyPageFooter" floatingBehavior="enclosed">
+                                <LAYOUTNODE name="separator7" width="1cm" length="max" layoutDirection="leftToRight"/>
+                                <LAYOUTNODE name="LayoutNode4" width="min" length="max" layoutDirection="leftToRight" floatingBehavior="enclosed">
+                                    <PAGENOBOX name="PageNoBox2" y="max/2" anchorY="0.5" floatingBehavior="enclosed" textExpression="&quot;Page &quot;+format(getPhysicalPageNumber(),ARABIC)+&quot; of &quot;+format(getTotalNumberOfPhysicalPages(),ARABIC)"/>
+                                </LAYOUTNODE>
+                            </LAYOUTNODE>
+                            <MAPCHART name="Mapchart" width="max" alignment="near" floatingBehavior="enclosed" title="Summary: Total price per user" keysTitle="Name" valuesTitle="Total price">
+                                <rtl:match name="orderline.orders.userid" nameConstraint="orderline.orders.userid" minOccurs="1" maxOccurs="unbounded">
+                                    <rtl:match name="orderline.orders.orderid" nameConstraint="orderline.orders.orderid" minOccurs="1" maxOccurs="unbounded">
+                                        <rtl:match name="orderline.lineitem.linenum" nameConstraint="orderline.lineitem.linenum" minOccurs="1" maxOccurs="unbounded">
+                                            <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded">
+                                                <rtl:input-variable name="orderline.orders.shipfirstname" type="FGLString" expectedLocation="expectedHere"/>
+                                                <rtl:input-variable name="orderline.orders.shiplastname" type="FGLString" expectedLocation="expectedHere"/>
+                                                <rtl:input-variable name="lineitemprice" type="FGLNumeric" expectedLocation="expectedHere"/>
+                                                <ITEM key="{{orderline.orders.shipfirstname.trim()+&quot; &quot;+orderline.orders.shiplastname.trim()}}" value="{{lineitemprice}}" name="Item41"/>
+                                            </rtl:match>
+                                        </rtl:match>
+                                    </rtl:match>
+                                </rtl:match>
+                            </MAPCHART>
+                        </MINIPAGE>
+                    </rtl:match>
+                    <rtl:match name="Report2" nameConstraint="Report2" minOccurs="1" maxOccurs="1">
+                        <MINIPAGE name="Page List" width="max" length="max">
+                            <LAYOUTNODE name="Page Header 1" width="max" length="min" port="anyPageHeader">
+                                <MINIPAGE name="MiniPage" width="min" length="max" layoutDirection="leftToRight">
+                                    <IMAGEBOX name="ImageBox" width="max" floatingBehavior="enclosed" url="LogoFourJs.png" fill="clip" intendedResolution="96"/>
+                                </MINIPAGE>
+                                <MINIPAGE name="StripeLayouter3" width="min" length="max" layoutDirection="leftToRight">
+                                    <WORDBOX name="Report Title" x="0" y="max/2" anchorX="0" anchorY="0.5" alignment="baseline" fontSize="25" baselineType="leftleft" floatingBehavior="enclosed" text="Order List"/>
+                                </MINIPAGE>
+                                <LAYOUTNODE name="separator5" width="0.5cm" length="max" layoutDirection="leftToRight"/>
+                                <MINIPAGE name="Table Header" class="grwTableHeader" width="min" length="max" fontBold="true" layoutDirection="leftToRight">
+                                    <WORDBOX name="Spacer" width="0.5cm" alignment="baseline" baselineType="leftleft" port="itemSeparator" text=" "/>
+                                    <WORDBOX name="orderline.product.productid Title" class="grwTableStringColumnTitle" width="2cm" floatingBehavior="enclosed" text="Prod. ID" localizeText="true"/>
+                                    <WORDBOX name="orderline.product.prodname Title" class="grwTableStringColumnTitle" width="3.5cm" alignment="baseline" floatingBehavior="enclosed" text="Prod. Name" localizeText="true"/>
+                                    <WORDBOX name="orderline.lineitem.quantity Title" class="grwTableNumericColumnTitle" width="3cm" alignment="baseline" floatingBehavior="enclosed" textAlignment="right" text="Quantity" localizeText="true"/>
+                                    <WORDBOX name="orderline.lineitem.unitprice Title" class="grwTableNumericColumnTitle" width="3cm" floatingBehavior="enclosed" textAlignment="right" text="Unit price" localizeText="true"/>
+                                    <WORDBOX name="lineitemprice Title" class="grwTableNumericColumnTitle" width="3cm" floatingBehavior="enclosed" textAlignment="right" text="Total price" localizeText="true"/>
+                                </MINIPAGE>
+                                <MINIPAGE name="separator2" width="1" length="max" bgColor="#000000" layoutDirection="leftToRight"/>
+                            </LAYOUTNODE>
+                            <LAYOUTNODE name="Page Footer 1" width="max" length="min" port="anyPageFooter" floatingBehavior="enclosed">
+                                <LAYOUTNODE name="separator4" width="1cm" length="max" layoutDirection="leftToRight"/>
+                                <LAYOUTNODE name="LayoutNode" width="min" length="max" layoutDirection="leftToRight" floatingBehavior="enclosed">
+                                    <PAGENOBOX name="PageNoBox1" y="max/2" anchorY="0.5" floatingBehavior="enclosed" textExpression="&quot;Page &quot;+format(getPhysicalPageNumber(),ARABIC)+&quot; of &quot;+format(getTotalNumberOfPhysicalPages(),ARABIC)"/>
+                                </LAYOUTNODE>
+                            </LAYOUTNODE>
+                            <MINIPAGE name="Summary" width="min" length="max" alignment="near" bgColor="#dadada" fontItalic="true" layoutDirection="leftToRight"/>
+                            <MINIPAGE name="Intro" width="min" length="max" bgColor="#dadada" fontItalic="true" layoutDirection="leftToRight">
+                                <rtl:input-variable name="orderline.orders.shipfirstname" type="FGLString" expectedLocation="expectedBefore"/>
+                                <rtl:input-variable name="orderline.orders.shiplastname" type="FGLString" expectedLocation="expectedBefore"/>
+                                <WORDBOX name="IntroUser" alignment="baseline" floatingBehavior="enclosed" text="{{&quot;Orders for user &quot;+orderline.orders.shipfirstname.trim()+&quot; &quot;+orderline.orders.shiplastname.trim()}}"/>
+                            </MINIPAGE>
+                            <rtl:match name="orderline.orders.orderid" nameConstraint="orderline.orders.orderid" minOccurs="1" maxOccurs="unbounded">
+                                <rtl:match name="orderline.lineitem.linenum" nameConstraint="orderline.lineitem.linenum" minOccurs="1" maxOccurs="unbounded">
+                                    <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded">
+                                        <MINIPAGE name="Table Row" class="grwTableRow" width="min" length="max" layoutDirection="leftToRight">
+                                            <WORDBOX name="Spacer_1" width="0.5cm" alignment="baseline" baselineType="leftleft" port="itemSeparator" text=" "/>
+                                            <rtl:input-variable name="orderline.product.productid2" type="FGLString" expectedLocation="expectedHere"/>
+                                            <WORDWRAPBOX name="orderline.product.productid Value" class="grwStringValue" width="2cm" floatingBehavior="enclosed" text="{{orderline.product.productid2}}"/>
+                                            <rtl:input-variable name="orderline.product.prodname2" type="FGLString" expectedLocation="expectedHere"/>
+                                            <WORDWRAPBOX name="orderline.product.prodname Value" class="grwStringValue" width="3.5cm" floatingBehavior="enclosed" text="{{orderline.product.prodname2}}"/>
+                                            <rtl:input-variable name="orderline.lineitem.quantity2" type="FGLNumeric" expectedLocation="expectedHere"/>
+                                            <DECIMALFORMATBOX name="orderline.lineitem.quantity Value" class="grwTableNumericColumnValue" width="3cm" anchorX="1" alignment="baseline" floatingBehavior="enclosed" textAlignment="right" format="----------#" value="{{orderline.lineitem.quantity2}}"/>
+                                            <rtl:input-variable name="orderline.lineitem.unitprice2" type="FGLNumeric" expectedLocation="expectedHere"/>
+                                            <DECIMALFORMATBOX name="orderline.lineitem.unitprice Value" class="grwTableNumericColumnValue" width="3cm" anchorX="1" floatingBehavior="enclosed" textAlignment="right" format="---,---,--&amp;.&amp;&amp;" value="{{orderline.lineitem.unitprice2}}"/>
+                                            <rtl:input-variable name="lineitemprice2" type="FGLNumeric" expectedLocation="expectedHere"/>
+                                            <DECIMALFORMATBOX name="lineitemprice Value" class="grwTableNumericColumnValue" width="3cm" anchorX="1" floatingBehavior="enclosed" textAlignment="right" format="---,---,--&amp;.&amp;&amp;" value="{{lineitemprice2}}"/>
+                                        </MINIPAGE>
+                                    </rtl:match>
+                                </rtl:match>
+                            </rtl:match>
+                            <MINIPAGE name="Summary_aggr" width="min" length="max" bgColor="#dadada" fontItalic="true" layoutDirection="leftToRight"/>
+                            <LAYOUTNODE name="separator8" width="0.5cm" length="max" alignment="near" layoutDirection="leftToRight"/>
+                        </MINIPAGE>
+                    </rtl:match>
+                </MINIPAGE>
+            </rtl:match>
+        </PXML>
+    </rtl:stylesheet>
+</report:Report>

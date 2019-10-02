@@ -17,7 +17,7 @@ schema "officestore"
 
 define a3_01
     ReportSettings
-    --= (report_name: "05_GroupBy_Agrregate.4rp",
+    --= (report_name: "05_GroupBy_Aggregate.4rp",
     = (report_name: "05_GroupBy_Duplicate.4rp",
         preview_mode: true,
         dist_mode: false,
@@ -90,12 +90,12 @@ function runreportfromdatabase(handler, orderby)
                     and item.productid = product.productid
                     and product.catid = category.catid
                     and country.code = orders.billcountry
-                --order by orders.userid, orders.orderid, lineitem.linenum
+                order by orders.userid, orders.orderid, lineitem.linenum
     end if
 
-    start report report_all_orders_notordered to xml handler handler
+    start report report_all_orders to xml handler handler
     foreach c_order into orderline.*
-        output to report report_all_orders_notordered(orderline.*)
+        output to report report_all_orders(orderline.*)
         if fgl_report_geterrorstatus() then
             display "fgl: stopping report, msg=\"",
                 fgl_report_geterrorstring(),
@@ -103,7 +103,7 @@ function runreportfromdatabase(handler, orderby)
             exit foreach
         end if
     end foreach
-    finish report report_all_orders_notordered
+    finish report report_all_orders
     display "produced " || fgl_report_gettotalnumberofpages() || " page(s)"
 
     close c_order
@@ -118,9 +118,7 @@ report report_all_orders(orderline)
         usertotal like orders.totalprice,
         ordertotal like orders.totalprice
 
-    order external by orderline.orders.userid,
-        orderline.orders.orderid,
-        orderline.lineitem.linenum
+    order external by orderline.orders.userid
 
     format
         first page header
@@ -130,36 +128,25 @@ report report_all_orders(orderline)
             display "user " || orderline.orders.userid
             let usertotal = 0
 
-        before group of orderline.orders.orderid
-            display "    order " || orderline.orders.orderid
-            let ordertotal = 0
-
         on every row
             display "        every row " || orderline.lineitem.linenum
             let lineitemprice =
                 orderline.lineitem.unitprice * orderline.lineitem.quantity
             let overalltotal = overalltotal + lineitemprice
             let usertotal = usertotal + lineitemprice
-            let ordertotal = ordertotal + lineitemprice
             print orderline.*,
                 lineitemprice,
                 overalltotal,
-                usertotal,
-                ordertotal
+                usertotal
 
 end report
 
 report report_all_orders_notordered(orderline)
-
     define
-        orderline ordertype,
-        lineitemprice like lineitem.unitprice
-
+        orderline ordertype
+        
     format
-
+    
         on every row
-            let lineitemprice =
-                orderline.lineitem.unitprice * orderline.lineitem.quantity
-            print orderline.*, lineitemprice
-
+            print orderline.*
 end report

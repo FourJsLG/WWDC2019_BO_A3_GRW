@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<?PxmlLayouter  pageWidth="a4width" pageHeight="a4length" topMargin="1.3cm" leftMargin="1.3cm" rightMargin="1.3cm" bottomMargin="1.3cm" markOverfullBoxesInDocument="false"?>
+<PXML author="FOUR Js Development Tools" creator="Genero Report Writer" keywords="MapChart Chart OrderReport" subject="Sample Report" title="Revenue by Customers and Categories" xmlns="http://www.4js.com/2004/PXML">
+    <MINIPAGE length="max" name="MiniPage1" width="max">
+        <PIEGRAPH length="max/2" name="Mapchart2" title="Fred Bloggs" layoutDirection="topToBottom" width="max" titles="Furniture,Supplies,Office Decor,Travelling,Entertainment" values="460.0,51.400000000000006,293.0,175.8,272.0" type="Ring" keysTitle="Insert keys title here" valuesTitle="Insert values title here" class="grwMapChart grwMainBox"/>
+        <PIEGRAPH length="max/2" name="Mapchart2" title="John Denis" layoutDirection="topToBottom" width="max" titles="Furniture,Office Decor,Entertainment" values="39.0,73.0,97.0" type="Ring" keysTitle="Insert keys title here" valuesTitle="Insert values title here" class="grwMapChart grwMainBox"/>
+        <PIEGRAPH length="max/2" name="Mapchart2" title="Jean Dupont" layoutDirection="topToBottom" width="max" titles="Furniture,Supplies,Entertainment" values="1619.0,43.15,18.0" type="Ring" keysTitle="Insert keys title here" valuesTitle="Insert values title here" class="grwMapChart grwMainBox"/>
+        <PIEGRAPH length="max/2" name="Mapchart2" title="Pedro Garcia" layoutDirection="topToBottom" width="max" titles="Furniture,Supplies,Travelling,Entertainment" values="39.0,4.0,11.9,32.0" type="Ring" keysTitle="Insert keys title here" valuesTitle="Insert values title here" class="grwMapChart grwMainBox"/>
+        <PIEGRAPH length="max/2" name="Mapchart2" title="Steve Miller" layoutDirection="topToBottom" width="max" titles="Office Decor,Furniture,Supplies,Travelling,Entertainment" values="17.0,1490.0,55.349999999999994,40.5,32.0" type="Ring" keysTitle="Insert keys title here" valuesTitle="Insert values title here" class="grwMapChart grwMainBox"/>
+        <PIEGRAPH length="max/2" name="Mapchart2" title="Charles Smith" layoutDirection="topToBottom" width="max" titles="Furniture,Supplies,Entertainment,Office Decor,Travelling" values="2087.0,6.5,412.0,241.0,42.9" type="Ring" keysTitle="Insert keys title here" valuesTitle="Insert values title here" class="grwMapChart grwMainBox"/>
+    </MINIPAGE>
+</PXML>

@@ -87,12 +87,16 @@
     <Group id="338781072" label="01_Inline_SubReports" language="Genero" targetDirectory="$(ProjectDir)/01_Inline_SubReports">
       <Application binaryName="a3_01_master" dependencies="455109296,273529316,224331282,164121750,369093270" externalDependencies="libgre.42x" id="618104883" label="a3_01_master">
         <VirtualFolder label="res"/>
-        <VirtualFolder label="rpt"/>
+        <VirtualFolder label="rpt">
+          <File filePath="01_Inline_SubReports/masterreport.4rp"/>
+        </VirtualFolder>
         <VirtualFolder label="src">
           <File compilerOptions="--build-rdd" filePath="01_Inline_SubReports/masterreport.4gl"/>
+          <File compilerOptions="--build-rdd" filePath="01_Inline_SubReports/report1.4gl"/>
+          <File compilerOptions="--build-rdd" filePath="01_Inline_SubReports/report2.4gl"/>
         </VirtualFolder>
       </Application>
-      <Application binaryName="a3_01_subreport1" dependencies="455109296,273529316,224331282" externalDependencies="libgre.42x" id="164121750" label="a3_01_subreport1">
+      <Application binaryName="a3_01_subreport1" dependencies="455109296,273529316,224331282" excludeFromBuild="true" externalDependencies="libgre.42x" id="164121750" label="a3_01_subreport1">
         <VirtualFolder label="res"/>
         <VirtualFolder label="rpt">
           <File filePath="01_Inline_SubReports/subreport1.4rp"/>
@@ -101,7 +105,7 @@
           <File compilerOptions="--build-rdd" filePath="01_Inline_SubReports/subreport1.4gl"/>
         </VirtualFolder>
       </Application>
-      <Application binaryName="a3_01_subreport2" dependencies="455109296,273529316,224331282" externalDependencies="libgre.42x" id="369093270" label="a3_01_subreport2">
+      <Application binaryName="a3_01_subreport2" dependencies="455109296,273529316,224331282" excludeFromBuild="true" externalDependencies="libgre.42x" id="369093270" label="a3_01_subreport2">
         <VirtualFolder label="res"/>
         <VirtualFolder label="rpt">
           <File filePath="01_Inline_SubReports/subreport2.4rp"/>
@@ -110,10 +114,10 @@
           <File compilerOptions="--build-rdd" filePath="01_Inline_SubReports/subreport2.4gl"/>
         </VirtualFolder>
       </Application>
+    </Group>
+    <Group id="108916077" label="02_RichTextEdit" language="Genero" targetDirectory="$(ProjectDir)/02_RichTextEdit">
       <Application binaryName="a3_02_main" dependencies="273529316" externalDependencies="libgre.42x" id="6014840" label="a3_02_main" targetDirectory="$(ProjectDir)/02_RichTextEdit">
-        <VirtualFolder label="res">
-          <File filePath="02_RichTextEdit/cities.html"/>
-        </VirtualFolder>
+        <VirtualFolder label="res"/>
         <VirtualFolder label="rpt">
           <File filePath="02_RichTextEdit/02_RichTextEdit.4rp"/>
         </VirtualFolder>
@@ -123,7 +127,6 @@
         </VirtualFolder>
       </Application>
     </Group>
-    <Group id="108916077" label="02_RichTextEdit" language="Genero" targetDirectory="$(ProjectDir)/02_RichTextEdit"/>
     <Group id="655753980" label="03_Distributed_Mode" language="Genero" targetDirectory="$(ProjectDir)/03_Distributed_Mode">
       <Application binaryName="a3_03_main" dependencies="455109296,273529316,224331282,7900604" externalDependencies="libgre.42x" id="253063750" label="a3_03_main">
         <VirtualFolder label="service_sample">
@@ -143,7 +146,7 @@
       <Application binaryName="a3_05_main" dependencies="455109296,273529316,224331282" externalDependencies="libgre.42x" id="278174764" label="a3_05_main">
         <VirtualFolder label="res"/>
         <VirtualFolder label="rpt">
-          <File filePath="05_Schema_Transformation/05_GroupBy_Agrregate.4rp"/>
+          <File filePath="05_Schema_Transformation/05_GroupBy_Aggregate.4rp"/>
           <File filePath="05_Schema_Transformation/05_GroupBy_Duplicate.4rp"/>
         </VirtualFolder>
         <VirtualFolder label="rst">
@@ -154,11 +157,15 @@
           <File compilerOptions="--build-rdd" filePath="05_Schema_Transformation/05_Schema_Transformation.4gl"/>
         </VirtualFolder>
       </Application>
-      <Application binaryName="a3_05_simple" dependencies="273529316" id="553651122" label="a3_05_simple">
-        <VirtualFolder label="rpt"/>
-        <VirtualFolder label="rst"/>
+      <Application binaryName="a3_05_simple" dependencies="273529316" externalDependencies="libgre.42x" id="553651122" label="a3_05_simple">
+        <VirtualFolder label="rpt">
+          <File filePath="05_Schema_Transformation/a3_05_simple.4rp"/>
+        </VirtualFolder>
+        <VirtualFolder label="rst">
+          <File filePath="05_Schema_Transformation/a3_05_simple.rst"/>
+        </VirtualFolder>
         <VirtualFolder label="src">
-          <File filePath="05_Schema_Transformation/a3_05_simple.4gl"/>
+          <File compilerOptions="--build-rdd" filePath="05_Schema_Transformation/a3_05_simple.4gl"/>
         </VirtualFolder>
       </Application>
     </Group>
@@ -167,15 +174,21 @@
         <VirtualFolder label="res"/>
         <VirtualFolder label="rpt">
           <File filePath="06_Templates/06_Templates.4rp"/>
-          <File filePath="06_Templates/Testtpl.4rp"/>
         </VirtualFolder>
         <VirtualFolder label="src">
           <File compilerOptions="--build-rdd" filePath="06_Templates/06_Templates.4gl"/>
         </VirtualFolder>
-        <VirtualFolder label="tpl">
-          <File filePath="06_Templates/MyReportTemplates/favchart-tpl-201909191645.4rt"/>
-          <File filePath="06_Templates/MyReportTemplates/favchart-tpl-201909191645.4rt.prop"/>
-          <File filePath="06_Templates/MyReportTemplates/favchart-tpl-201909191645.rsd"/>
+        <VirtualFolder label="tpl"/>
+      </Application>
+    </Group>
+    <Group id="535788240" label="07_Paragraph" targetDirectory="$(ProjectDir)\07_Paragraph">
+      <Application binaryName="a3_07_main" dependencies="224331282,273529316" externalDependencies="libgre.42x" id="649193754" label="a3_07_main">
+        <VirtualFolder label="res"/>
+        <VirtualFolder label="rpt">
+          <File filePath="07_Paragraph/07_Paragraph.4rp"/>
+        </VirtualFolder>
+        <VirtualFolder label="src">
+          <File compilerOptions="--build-rdd" filePath="07_Paragraph/07_Paragraph.4gl"/>
         </VirtualFolder>
       </Application>
     </Group>

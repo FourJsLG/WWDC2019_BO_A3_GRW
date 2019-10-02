@@ -23,7 +23,8 @@
                                 </rtl:match>
                                 <rtl:input-variable name="orderline.orders.shipfirstname" type="FGLString" expectedLocation="expectedBefore"/>
                                 <rtl:input-variable name="orderline.orders.shiplastname" type="FGLString" expectedLocation="expectedBefore"/>
-                                <ITEM key="{{orderline.orders.shipfirstname.trim()+&quot; &quot;+orderline.orders.shiplastname.trim()}}" name="Item2"/>
+                                <rtl:input-variable name="orderline.lineitem.unitprice" type="FGLNumeric" expectedLocation="expectedBefore"/>
+                                <ITEM key="{{orderline.orders.shipfirstname.trim()+&quot; &quot;+orderline.orders.shiplastname.trim()}}" value="{{orderline.lineitem.unitprice}}" name="Item2"/>
                             </rtl:match>
                         </rtl:match>
                     </MAPCHART>

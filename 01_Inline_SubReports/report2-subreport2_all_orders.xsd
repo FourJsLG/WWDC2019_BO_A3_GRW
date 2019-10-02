@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This XML Schema file is a conversion of report2.rdd with name subreport2_all_orders done on Sun Sep 29 09:19:36 2019-->
+<xsd:schema targetNamespace="http://tempuri.org/report2-subreport2_all_orders" xmlns="http://tempuri.org/report2-subreport2_all_orders" xmlns:fgl="http://www.4js.com/2010/FglTypes" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="fgltypes.xsd" namespace="http://www.4js.com/2010/FglTypes"/>
+  <xsd:element name="Report0" type="report2-subreport2_all_orders"/>
+  <!--Definition of type : report2-subreport2_all_orders-->
+  <xsd:complexType name="report2-subreport2_all_orders">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>Report</label>
+        <match>Report</match>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Group1" type="GroupType1" maxOccurs="unbounded" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Definition of type : GroupType1-->
+  <xsd:complexType name="GroupType1">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>Group userid</label>
+        <match>Group</match>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Group2" type="GroupType2" maxOccurs="unbounded" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Definition of type : GroupType2-->
+  <xsd:complexType name="GroupType2">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>Group orderid</label>
+        <match>Group</match>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Group3" type="GroupType3" maxOccurs="unbounded" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Definition of type : GroupType3-->
+  <xsd:complexType name="GroupType3">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>Group linenum</label>
+        <match>Group</match>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="OnEveryRow4" type="OnEveryRowType4" maxOccurs="unbounded" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Definition of type : OnEveryRowType4-->
+  <xsd:complexType name="OnEveryRowType4">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>OnEveryRow</label>
+        <match>OnEveryRow</match>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="orderline.orders.orderid" type="fgl:integer"/>
+      <xsd:element name="orderline.orders.userid" type="char_80"/>
+      <xsd:element name="orderline.orders.orderdate" type="fgl:date"/>
+      <xsd:element name="orderline.orders.shipfirstname" type="char_80"/>
+      <xsd:element name="orderline.orders.shiplastname" type="char_80"/>
+      <xsd:element name="orderline.orders.shipaddr1" type="char_80"/>
+      <xsd:element name="orderline.orders.shipaddr2" type="char_80"/>
+      <xsd:element name="orderline.orders.shipcity" type="char_80"/>
+      <xsd:element name="orderline.orders.shipstate" type="char_80"/>
+      <xsd:element name="orderline.orders.shipzip" type="char_20"/>
+      <xsd:element name="orderline.orders.shipcountry" type="char_3"/>
+      <xsd:element name="orderline.orders.billfirstname" type="char_80"/>
+      <xsd:element name="orderline.orders.billlastname" type="char_80"/>
+      <xsd:element name="orderline.orders.billaddr1" type="char_80"/>
+      <xsd:element name="orderline.orders.billaddr2" type="char_80"/>
+      <xsd:element name="orderline.orders.billcity" type="char_80"/>
+      <xsd:element name="orderline.orders.billstate" type="char_80"/>
+      <xsd:element name="orderline.orders.billzip" type="char_20"/>
+      <xsd:element name="orderline.orders.billcountry" type="char_3"/>
+      <xsd:element name="orderline.orders.totalprice" type="decimal_10_2"/>
+      <xsd:element name="orderline.orders.creditcard" type="char_80"/>
+      <xsd:element name="orderline.orders.exprdate" type="char_7"/>
+      <xsd:element name="orderline.orders.cardtype" type="char_80"/>
+      <xsd:element name="orderline.orders.sourceapp" type="char_3"/>
+      <xsd:element name="orderline.account.userid" type="char_80"/>
+      <xsd:element name="orderline.account.email" type="char_80"/>
+      <xsd:element name="orderline.account.firstname" type="char_80"/>
+      <xsd:element name="orderline.account.lastname" type="char_80"/>
+      <xsd:element name="orderline.account.acstatus" type="char_2"/>
+      <xsd:element name="orderline.account.addr1" type="char_80"/>
+      <xsd:element name="orderline.account.addr2" type="char_40"/>
+      <xsd:element name="orderline.account.city" type="char_80"/>
+      <xsd:element name="orderline.account.state" type="char_80"/>
+      <xsd:element name="orderline.account.zip" type="char_20"/>
+      <xsd:element name="orderline.account.country" type="char_3"/>
+      <xsd:element name="orderline.account.phone" type="char_80"/>
+      <xsd:element name="orderline.account.langpref" type="char_80"/>
+      <xsd:element name="orderline.account.favcategory" type="char_10"/>
+      <xsd:element name="orderline.account.mylistopt" type="fgl:integer"/>
+      <xsd:element name="orderline.account.banneropt" type="fgl:integer"/>
+      <xsd:element name="orderline.account.sourceapp" type="char_3"/>
+      <xsd:element name="orderline.country.code" type="char_3"/>
+      <xsd:element name="orderline.country.codedesc" type="char_50"/>
+      <xsd:element name="orderline.lineitem.orderid" type="fgl:integer"/>
+      <xsd:element name="orderline.lineitem.linenum" type="fgl:integer"/>
+      <xsd:element name="orderline.lineitem.itemid" type="char_10"/>
+      <xsd:element name="orderline.lineitem.quantity" type="fgl:integer"/>
+      <xsd:element name="orderline.lineitem.unitprice" type="decimal_10_2"/>
+      <xsd:element name="orderline.product.productid" type="char_10"/>
+      <xsd:element name="orderline.product.catid" type="char_10"/>
+      <xsd:element name="orderline.product.prodname" type="char_80"/>
+      <xsd:element name="orderline.product.proddesc" type="char_255"/>
+      <xsd:element name="orderline.product.prodpic" type="char_255"/>
+      <xsd:element name="orderline.category.catid" type="char_10"/>
+      <xsd:element name="orderline.category.catorder" type="fgl:smallint"/>
+      <xsd:element name="orderline.category.catname" type="char_80"/>
+      <xsd:element name="orderline.category.catdesc" type="char_255"/>
+      <xsd:element name="orderline.category.catpic" type="char_255"/>
+      <xsd:element name="orderline.item.itemid" type="char_10"/>
+      <xsd:element name="orderline.item.productid" type="char_10"/>
+      <xsd:element name="orderline.item.listprice" type="decimal_10_2"/>
+      <xsd:element name="orderline.item.unitcost" type="decimal_10_2"/>
+      <xsd:element name="orderline.item.supplier" type="fgl:integer"/>
+      <xsd:element name="orderline.item.itstatus" type="char_2"/>
+      <xsd:element name="orderline.item.attr1" type="char_80"/>
+      <xsd:element name="orderline.item.attr2" type="char_80"/>
+      <xsd:element name="orderline.item.attr3" type="char_80"/>
+      <xsd:element name="orderline.item.attr4" type="char_80"/>
+      <xsd:element name="orderline.item.attr5" type="char_80"/>
+      <xsd:element name="lineitemprice" type="decimal_10_2"/>
+      <xsd:element name="overalltotal" type="decimal_10_2"/>
+      <xsd:element name="usertotal" type="decimal_10_2"/>
+      <xsd:element name="ordertotal" type="decimal_10_2"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="char_80">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(80)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="80"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_20">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(20)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="20"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_3">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(3)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="3"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal_10_2">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>DECIMAL(10,2)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:decimal">
+      <xsd:totalDigits value="10"/>
+      <xsd:fractionDigits value="2"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_7">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(7)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="7"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_2">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(2)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="2"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_40">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(40)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="40"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_10">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(10)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="10"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_50">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(50)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="50"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="char_255">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <label>CHAR(255)</label>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="fgl:char">
+      <xsd:maxLength value="255"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
