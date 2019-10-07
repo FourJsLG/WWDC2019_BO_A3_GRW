@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Project defaultApplication="278174764" gstVersion="31405" version="3.3">
+<Project defaultApplication="553651122" gstVersion="31405" version="3.3">
   <Settings>
     <DynamicProperties version="2">
       <DynamicProperty description="Accent color (Android 5.0 and later)" initialValue="#9575CD" isDefaultInherited="false" isHidden="false" label="Accent color" name="gma-accent-color" readOnly="false" type="COLOR"/>
@@ -156,6 +156,7 @@
         <VirtualFolder label="src">
           <File compilerOptions="--build-rdd" filePath="05_Schema_Transformation/05_Schema_Transformation.4gl"/>
         </VirtualFolder>
+        <File filePath="05_Schema_Transformation/20191002_05_GroupBy_Duplicate.rst"/>
       </Application>
       <Application binaryName="a3_05_simple" dependencies="273529316" externalDependencies="libgre.42x" id="553651122" label="a3_05_simple">
         <VirtualFolder label="rpt">
@@ -163,6 +164,7 @@
         </VirtualFolder>
         <VirtualFolder label="rst">
           <File filePath="05_Schema_Transformation/a3_05_simple.rst"/>
+          <File filePath="05_Schema_Transformation/test.rsd.rst"/>
         </VirtualFolder>
         <VirtualFolder label="src">
           <File compilerOptions="--build-rdd" filePath="05_Schema_Transformation/a3_05_simple.4gl"/>

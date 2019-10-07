@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--This XML Schema file is a conversion of report2.rdd with name subreport2_all_orders done on Sun Sep 29 09:19:36 2019-->
-<xsd:schema targetNamespace="http://tempuri.org/report2-subreport2_all_orders" xmlns="http://tempuri.org/report2-subreport2_all_orders" xmlns:fgl="http://www.4js.com/2010/FglTypes" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <xsd:import schemaLocation="fgltypes.xsd" namespace="http://www.4js.com/2010/FglTypes"/>
+<!--This XML Schema file is a conversion of report2.rdd with name subreport2_all_orders done on Thu Oct 3 11:38:05 2019-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns="http://tempuri.org/report2-subreport2_all_orders" targetNamespace="http://tempuri.org/report2-subreport2_all_orders" xmlns:fgl="http://www.4js.com/2010/FglTypes">
+  <xsd:import namespace="http://www.4js.com/2010/FglTypes" schemaLocation="fgltypes.xsd"/>
   <xsd:element name="Report0" type="report2-subreport2_all_orders"/>
   <!--Definition of type : report2-subreport2_all_orders-->
   <xsd:complexType name="report2-subreport2_all_orders">
@@ -12,7 +12,7 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="Group1" type="GroupType1" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Group1" type="GroupType1"/>
     </xsd:sequence>
   </xsd:complexType>
   <!--Definition of type : GroupType1-->
@@ -24,7 +24,7 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="Group2" type="GroupType2" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Group2" type="GroupType2"/>
     </xsd:sequence>
   </xsd:complexType>
   <!--Definition of type : GroupType2-->
@@ -36,7 +36,7 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="Group3" type="GroupType3" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Group3" type="GroupType3"/>
     </xsd:sequence>
   </xsd:complexType>
   <!--Definition of type : GroupType3-->
@@ -48,7 +48,7 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="OnEveryRow4" type="OnEveryRowType4" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="OnEveryRow4" type="OnEveryRowType4"/>
     </xsd:sequence>
   </xsd:complexType>
   <!--Definition of type : OnEveryRowType4-->

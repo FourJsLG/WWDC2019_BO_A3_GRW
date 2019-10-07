@@ -17,6 +17,8 @@
                         <MINIPAGE name="MiniPage" width="min" length="min" alignment="near">
                             <rtl:input-variable name="richtext" type="FGLString" expectedLocation="expectedHere"/>
                             <RICHTEXTBOX name="RichTextBox" width="width(&quot;M&quot;)*20" alignment="baseline" floatingBehavior="enclosed" type="html" url="{{&quot;data:text/html,&quot;+(&quot;&lt;html&gt;&quot;+richtext+&quot;&lt;/html&gt;&quot;).urlEncode()}}"/>
+                            <BR name="Break"/>
+                            <RICHTEXTBOX name="RichTextBox1" width="width(&quot;M&quot;)*20" floatingBehavior="enclosed" type="pxml" url="02_RichTextEdit.pxml"/>
                         </MINIPAGE>
                     </rtl:match>
                 </MINIPAGE>

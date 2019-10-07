@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--This XML Schema file is a conversion of masterreport.rdd with name master_report done on Sun Sep 29 09:19:36 2019-->
-<xsd:schema targetNamespace="http://tempuri.org/masterreport-master_report" xmlns="http://tempuri.org/masterreport-master_report" xmlns:sub1="http://tempuri.org/report1-subreport1_all_orders" xmlns:fgl="http://www.4js.com/2010/FglTypes" xmlns:sub2="http://tempuri.org/report2-subreport2_all_orders" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <xsd:import schemaLocation="report2-subreport2_all_orders.xsd" namespace="http://tempuri.org/report2-subreport2_all_orders"/>
-  <xsd:import schemaLocation="report1-subreport1_all_orders.xsd" namespace="http://tempuri.org/report1-subreport1_all_orders"/>
-  <xsd:import schemaLocation="fgltypes.xsd" namespace="http://www.4js.com/2010/FglTypes"/>
+<!--This XML Schema file is a conversion of masterreport.rdd with name master_report done on Thu Oct 3 11:38:05 2019-->
+<xsd:schema xmlns:sub1="http://tempuri.org/report1-subreport1_all_orders" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns="http://tempuri.org/masterreport-master_report" targetNamespace="http://tempuri.org/masterreport-master_report" xmlns:fgl="http://www.4js.com/2010/FglTypes" xmlns:sub2="http://tempuri.org/report2-subreport2_all_orders">
+  <xsd:import namespace="http://tempuri.org/report2-subreport2_all_orders" schemaLocation="report2-subreport2_all_orders.xsd"/>
+  <xsd:import namespace="http://tempuri.org/report1-subreport1_all_orders" schemaLocation="report1-subreport1_all_orders.xsd"/>
+  <xsd:import namespace="http://www.4js.com/2010/FglTypes" schemaLocation="fgltypes.xsd"/>
   <xsd:element name="Report0" type="masterreport-master_report"/>
   <!--Definition of type : masterreport-master_report-->
   <xsd:complexType name="masterreport-master_report">
@@ -14,7 +14,7 @@
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="OnEveryRow1" type="OnEveryRowType1" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="OnEveryRow1" type="OnEveryRowType1"/>
     </xsd:sequence>
   </xsd:complexType>
   <!--Definition of type : OnEveryRowType1-->

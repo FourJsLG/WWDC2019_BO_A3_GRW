@@ -20,7 +20,7 @@ define a3_01
     = (report_name: "03_Distributed_Mode.4rp",
         preview_mode: true,
         dist_mode: false,
-        viewer: "standard")
+        viewer: "custom")
 
 main
 

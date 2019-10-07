@@ -40,7 +40,7 @@ main
             end if
             let rec.rightnow = today
             if isgdc() then
-                call fgl_report_selectdevice("SVG")
+                call fgl_report_selectdevice("PDF")
             else
                 call fgl_report_selectdevice("Browser")
                 call ui.interface.frontcall(

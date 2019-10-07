@@ -4,7 +4,7 @@
 <Fct c="10" el="7" l="1" n="isgdc()" t="F" v="pub"/>
 </File>
 <File n="common/lib/globals.4gl" s="2" ts="20190923130337694"/>
-<File n="common/lib/grw.4gl" s="2" ts="20190930143444405">
+<File n="common/lib/grw.4gl" s="2" ts="20191003122248482">
 <Fct c="10" el="91" l="79" n="dist_mode_settings(dist_mode BOOLEAN)" t="F" v="pub">
 <Call c="14" l="82" n="fgl_report_configureDistributedProcessing" t="F"/>
 <Call c="14" l="83" n="fgl_report_configureDistributedEnvironment" t="F"/>
@@ -111,7 +111,7 @@
 <Call c="18" l="35" n="preview_report" t="F"/>
 </Fct>
 </File>
-<File n="02_RichTextEdit/02_RichTextEdit.4gl" s="2" ts="20190930223028344">
+<File n="02_RichTextEdit/02_RichTextEdit.4gl" s="2" ts="20191002093748374">
 <Dep t="common/lib/common.4gl"/>
 <Fct c="8" el="63" l="57" n="richtextreport(richtext STRING,rightnow DATE)" t="R" v="pub"/>
 <Fct c="1" el="55" l="14" n="main()" t="F" v="pub">
@@ -126,7 +126,7 @@
 <Call c="27" l="52" n="richtextreport" t="R"/>
 </Fct>
 </File>
-<File n="03_Distributed_Mode/03_Distributed_Mode.4gl" s="2" ts="20190930143444458">
+<File n="03_Distributed_Mode/03_Distributed_Mode.4gl" s="2" ts="20191003122248520">
 <Dep t="common/lib/common.4gl"/>
 <Dep t="common/lib/globals.4gl"/>
 <Dep t="common/lib/grw.4gl"/>
@@ -147,7 +147,7 @@
 <Call c="18" l="35" n="preview_report" t="F"/>
 </Fct>
 </File>
-<File n="05_Schema_Transformation/05_Schema_Transformation.4gl" s="2" ts="20191001232845771">
+<File n="05_Schema_Transformation/05_Schema_Transformation.4gl" s="2" ts="20191003121231229">
 <Dep t="common/lib/common.4gl"/>
 <Dep t="common/lib/globals.4gl"/>
 <Dep t="common/lib/grw.4gl"/>
@@ -169,7 +169,7 @@
 <Call c="18" l="36" n="preview_report" t="F"/>
 </Fct>
 </File>
-<File n="05_Schema_Transformation/a3_05_simple.4gl" s="2" ts="20191001221046644">
+<File n="05_Schema_Transformation/a3_05_simple.4gl" s="2" ts="20191003120036374">
 <Dep t="common/lib/common.4gl"/>
 <Dep t="common/lib/grw.4gl"/>
 <Fct c="10" el="130" l="106" n="create_tables()" t="F" v="pub"/>

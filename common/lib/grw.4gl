@@ -54,12 +54,12 @@ function viewer_settings(viewer)
     if viewer = "custom" then
         let uuid = security.randomgenerator.createuuidstring()
         call fgl_report_setbrowserdocumentdirectory(
-            fgl_getenv("GRE_PRIVATE_DIR") || "/" || uuid)
-        call fgl_report_setbrowserfontdirectory(fgl_getenv("GRE_PRIVATE_DIR"))
+            fgl_getenv("GRE_PUBLIC_DIR") || "/" || uuid)
+        call fgl_report_setbrowserfontdirectory(fgl_getenv("GRE_PUBLIC_DIR"))
         call fgl_report_setbrowserdocumentdirectoryurl(
-            fgl_getenv("GRE_PRIVATE_URL_PREFIX") || "/" || uuid)
+            fgl_getenv("GRE_PUBLIC_URL_PREFIX") || "/" || uuid)
         call fgl_report_setbrowserfontdirectoryurl(
-            fgl_getenv("GRE_PRIVATE_URL_PREFIX"))
+            fgl_getenv("GRE_PUBLIC_URL_PREFIX"))
         call ui.interface.frontcall(
             "standard",
             "launchurl",
@@ -67,7 +67,7 @@ function viewer_settings(viewer)
                 || "/myviewer.html?reportId="
                 || uuid
                 || "&privateUrlPrefix="
-                || fgl_getenv("GRE_PRIVATE_URL_PREFIX")],
+                || fgl_getenv("GRE_PUBLIC_URL_PREFIX")],
             [])
     else
         call ui.interface.frontcall(
